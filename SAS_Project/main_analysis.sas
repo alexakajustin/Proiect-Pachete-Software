@@ -82,9 +82,10 @@ run;
 proc sql;
     create table work.meta_evenimente as
     select Year, 
-           case when Year = 2011 then "Lansare Witcher 2"
-                when Year = 2015 then "Lansare Witcher 3"
-                when Year = 2020 then "Lansare Cyberpunk 2077"
+           case when Year = 2020 then "Lansare Cyberpunk 2077"
+                when Year = 2021 then "Declin/Refacere Post-Lansare"
+                when Year = 2022 then "Revenire (Anime Edgerunners)"
+                when Year = 2023 then "Lansare DLC (Phantom Liberty)"
                 else "An Intermediar"
            end as Eveniment_Major
     from work.cdpr_data;
