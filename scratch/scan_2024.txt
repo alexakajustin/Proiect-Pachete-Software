@@ -1,0 +1,247 @@
+Row 0: Prepared on the basis of the Condensed interim consolidated financial statement of the CD PROJEKT Capital Group, published on March 25th, 2025.
+Row 3: The consolidated profit and loss account of the 
+CD PROJEKT Group 
+Row 4: CONSOLIDATED PROFIT AND LOSS ACCOUNT
+Row 5: Sales revenue
+Row 6: Sales of products
+Row 7: Sales of services
+Row 8: Sales of goods for resale and materials
+Row 9: Cost of sales of products, services, goods for resale and materials
+Row 10: Cost of products and services sold
+Row 11: Cost of goods for resale and materials sold
+Row 12: Gross profit/(loss) on sales
+Row 13: Selling expenses
+Row 14: Total administrative expenses, including:
+Row 15: costs of research projects
+Row 16: Other operating income
+Row 17: Other operating expenses
+Row 18: (Impairment)/reversal of impairment of financial instruments
+Row 19: Operating profit/(loss)
+Row 20: Finance income
+Row 21: Finance costs
+Row 22: Profit/(loss) before tax 
+Row 23: Income tax
+Row 24: Net profit/(loss)
+Row 26: Net profit/(loss) attributable to owners of CD PROJEKT S.A.
+Row 27: * dane przekształcone / adjusted data
+Row 29: Net earnings/(loss) per share (in PLN)
+Row 30: Basic for the reporting period
+Row 31: Diluted for the reporting period
+Row 34: Net profit/(loss)
+Row 35: Other comprehensive income subject to reclassification to gains or losses after specific conditions have been met:
+Row 36: Exchange differences on measurement of foreign operations
+Row 37: Measurement of derivative financial instruments – fair value through other comprehensive income, taking into account the tax effect
+Row 38: Differences from rounding to PLN thousands
+Row 39: Other comprehensive income not subject to reclassification to gains or losses
+Row 40: Total comprehensive income
+Row 41: Total comprehensive income attributable to non-controlling interests
+Row 42: Total comprehensive income attributable to owners of CD PROJEKT S.A.
+Row 45: The consolidated statement of financial position of the 
+CD PROJEKT Group 
+Row 46: ASSETS
+Row 47: NON-CURRENT ASSETS
+Row 48: Property, plant and equipment
+Row 49: Intangible assets
+Row 50: Expenditure on development projects
+Row 51: Goodwill
+Row 52: Investment properties
+Row 53: Perpetual usufruct of land
+Row 54: Shares in non-consolidated subordinated entities
+Row 55: Other financial assets
+Row 56: Prepayments and deferred costs
+Row 57: Deferred tax assets
+Row 58: Other receivables
+Row 59: CURRENT ASSETS
+Row 60: Inventories
+Row 61: Trade receivables
+Row 62: Current income tax receivable
+Row 63: Other receivables 
+Row 64: Other financial assets 
+Row 65: Prepayments and deferred costs 
+Row 66: Bank deposits over 3 months
+Row 67: Cash and cash equivalents
+Row 68: Fixed assets held for sale
+Row 69: TOTAL ASSETS
+Row 70: * dane przekształcone / adjusted data
+Row 71: LIABILITIES AND EQUITY
+Row 72: EQUITY
+Row 73: Equity of the shareholders of CD PROJEKT S.A.
+Row 74: Share capital
+Row 75: Supplementary capital 
+Row 76: Share premium
+Row 77: Treasury shares
+Row 78: Other reserves
+Row 79: Foreign exchange differences on translation
+Row 80: Retained earnings/(Accumulated losses)
+Row 81: Net profit (loss) for the period
+Row 82: Non-controlling interests 
+Row 83: NON-CURRENT LIABILITIES
+Row 84: Other financial liabilities
+Row 85: Other liabilities
+Row 86: Deferred tax provisions
+Row 87: Deferred income
+Row 88: Provision for pension and similar benefits
+Row 89: Other provisions
+Row 90: CURRENT LIABILITIES
+Row 91: Credits and loans
+Row 92: Other financial liabilities 
+Row 93: Trade payables
+Row 94: Current income tax liabilities
+Row 95: Other liabilities 
+Row 96: Deferred income 
+Row 97: Provision for pension and similar benefits 
+Row 98: Other provisions 
+Row 99: TOTAL LIABILITIES AND EQUITY
+Row 100: * dane przekształcone / adjusted data
+Row 102: The consolidated statement of cash flows of the 
+CD PROJEKT Group 
+Row 103: STATEMENT OF CASH FLOWS
+Row 104: OPERATING ACTIVITIES
+Row 105: Net profit/(loss)
+Row 106: Total adjustments:
+Row 107: Depreciation and amortization of property, plant and equipment, intangible assets, expenditure on development projects and investment properties
+Row 108: Amortization of development projects recognized as cost of goods sold
+Row 109: Foreign exchange (gains)/losses
+Row 110: Interest and shares in profits 
+Row 111: (Gains)/Losses on investing activities
+Row 112: Increase/(Decrease) in provisions
+Row 113: (Increase)/Decrease in inventories
+Row 114: (Increase)/Decrease in receivables
+Row 115: Increase/(Decrease) in liabilities, excluding loans and borrowings
+Row 116: Change in other assets and liabilities
+Row 117: Other adjustments
+Row 118: Cash from operating activities
+Row 119: Income tax expense
+Row 120: Withholding tax paid abroad
+Row 121: Income tax (paid)/refunded
+Row 122: Net cash from operating activities
+Row 123: INVESTING ACTIVITIES
+Row 124: Cash inflows
+Row 125: Sale of intangible assets and property, plant and equipment
+Row 126: Cash assets gained in the acquisition of an enterprise
+Row 127: Reimbursement of advance payment for investment properties and perpetual usufruct of land
+Row 128: Disposal of financial assets
+Row 129: Sales of shares in subsidiaries
+Row 130: Repayment of loans granted
+Row 131: Expiry of bank deposits over 3 months
+Row 132: Redemption of bonds
+Row 133: Interest on bonds
+Row 134: Interest received on deposits 
+Row 135: Inflows from execution of forward contracts
+Row 136: Other inflows from investing activities
+Row 137: Cash outflows
+Row 138: Acquisition of intangible assets and property, plant and equipment
+Row 139: Expenditure on development projects
+Row 140: Expenditure on intangible assets
+Row 141: Acquisition of an enterprise
+Row 142: Acquisition of investment properties and capitalization of expenditure
+Row 143: Loans granted
+Row 144: Capital contributions at subsidiary
+Row 145: Acquisition of subsidiary
+Row 146: Purchase of shares in a subsidiary
+Row 147: Purchase of private equity interests in the gaming sector
+Row 148: Advance payment for investment properties
+Row 149: Placement of bank deposits over 3 months
+Row 150: Purchase of bonds and cost of their purchase
+Row 151: Outflows on execution of forward contracts
+Row 152: Increasing the capital of a subsidiary
+Row 153: Other outflows on investing activities
+Row 154: Net cash used in investing activities
+Row 155: FINANCING ACTIVITIES
+Row 156: Cash inflows
+Row 157: Net proceeds from the sale of shares and issue of shares in the execution of the incentive plan
+Row 158: Credits and loans
+Row 159: Settlement of lease receivables
+Row 160: Interest payments
+Row 161: Cash outflows
+Row 162: Increase in share capital of subsidiary company
+Row 163: Purchase of treasury shares for redemption
+Row 164: Dividends and other distributions to shareholders
+Row 165: Purchase of own shares in order to enable exercise of options granted under the incentive program
+Row 166: Payment of lease liabilities
+Row 167: Interest paid
+Row 168: Net cash used in financing activities
+Row 169: Net increase/(decrease) in cash and cash equivalents
+Row 170: Change in cash and cash equivalents in the balance sheet
+Row 171: Cash and cash equivalents as at the beginning of the period
+Row 172: Cash and cash equivalents as at the end of the period
+Row 182: The consolidated profit and loss account of the 
+CD PROJEKT Group by individual segments
+Row 183: PROFIT AND LOSS ACCOUNT
+Row 185: Sales revenues
+Row 186: Sales of products
+Row 187: Sales of services
+Row 188: Sales of goods for resale and materials
+Row 189: Cost of sales of products, services, goods for resale and materials
+Row 190: Cost of products and services sold
+Row 191: Cost of goods for resale and materials sold
+Row 192: Gross profit/(loss) on sales
+Row 193: Selling expenses
+Row 194: Total administrative expenses, including:
+Row 195: costs of research projects
+Row 196: Other operating income
+Row 197: Other operating expenses
+Row 198: (Impairment)/reversal of impairment of financial instruments
+Row 199: Operating profit/(loss)
+Row 200: Finance income
+Row 201: Finance costs
+Row 202: Profit/(loss) before tax
+Row 203: Income tax expense
+Row 204: Net profit/(loss)
+Row 206: Net profit/(loss) attributable to CD PROJEKT S.A.
+Row 210: The consolidated statement of financial position of the 
+CD PROJEKT Group by individual segments
+Row 211: ASSETS
+Row 213: NON-CURRENT ASSETS
+Row 214: Property, plant and equipment
+Row 215: Intangible assets
+Row 216: Expenditure on development projects
+Row 217: Goodwill
+Row 218: Investment properties
+Row 219: Investments in subordinated entities
+Row 220: Shares in non-consolidated subordinated entities
+Row 221: Other financial assets
+Row 222: Prepayments and deferred costs
+Row 223: Deferred tax assets
+Row 224: Other receivables
+Row 225: CURRENT ASSETS
+Row 226: Inventories
+Row 227: Trade receivables
+Row 228: Current income tax receivable
+Row 229: Other receivables
+Row 230: Other financial assets
+Row 231: Prepayments and deferred costs
+Row 232: Cash and cash equivalents
+Row 233: Bank deposits over 3 months
+Row 234: Fixed assets held for sale
+Row 235: TOTAL ASSETS
+Row 238: LIABILITIES
+Row 240: EQUITY
+Row 241: Equity attributable to shareholders of the parent entity
+Row 242: Share capital
+Row 243: Supplementary capital
+Row 244: Share premium
+Row 245: Treasury shares
+Row 246: Other reserves
+Row 247: Foreign exchange differences on translation
+Row 248: Retained earnings/(Accumulated losses)
+Row 249: Net profit (loss) for the period
+Row 250: Non-controlling interests
+Row 251: NON-CURRENT LIABILITIES
+Row 252: Credits and loans
+Row 253: Other financial liabilities
+Row 254: Other liabilities
+Row 255: Deferred tax provisions
+Row 256: Deferred income
+Row 257: Provisions for employee benefits and similar liabilities
+Row 258: Other provisions
+Row 259: CURRENT LIABILITIES
+Row 260: Credits and loans
+Row 261: Other financial liabilities
+Row 262: Trade payables
+Row 263: Current income tax liabilities
+Row 264: Other liabilities
+Row 265: Deferred income
+Row 266: Provision for retirement and similar benefits
+Row 267: Other provisions
+Row 268: TOTAL EQUITY AND LIABILITIES

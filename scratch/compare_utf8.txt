@@ -1,0 +1,158 @@
+
+--- SCANNING YEAR 2017 ---
+Row 25: Net profit (loss) attributable to equity holders of parent entity  | Value: 200270
+Row 40: Total comprehensive income attributable to equity holders of CD PROJEKT S.A. | Value: 196470
+Row 44: ASSETS | Value: N/A
+Row 45: FIXED ASSETS | Value: 255535
+Row 46: Tangible assets | Value: 18832
+Row 51: Other financial assets | Value: 0
+Row 52: Deferred income tax assets | Value: 0
+Row 54: WORKING ASSETS | Value: 725978
+Row 59: Other financial assets | Value: 0
+Row 63: TOTAL ASSETS | Value: 981513
+Row 65: LIABILITIES | Value: N/A
+Row 66: EQUITY | Value: 882899
+Row 67: Equity attributable to shareholders of the parent company | Value: 882899
+Row 74: Minority interest equity | Value: 0
+Row 75: LONG-TERM LIABILITIES | Value: 4130
+Row 76: Other financial liabilities | Value: 148
+Row 77: Deferred income tax liabilities | Value: 1878
+Row 79: Provisions for employee benefits and similar liabilities | Value: 81
+Row 80: SHORT-TERM LIABILITIES | Value: 94484
+Row 82: Other financial liabilities | Value: 190
+Row 83: Trade liabilities | Value: 37374
+Row 84: Current income tax liabilities | Value: 3457
+Row 85: Other liabilities | Value: 6770
+Row 87: Provisions for employee benefits and similar liabilities | Value: 1
+Row 89: TOTAL LIABILITIES | Value: 981513
+Row 97: Depreciation of fixed assets and intangibles/legal assets | Value: 4906
+Row 104: Change in liabilities excluding credits and loans | Value: 6433
+Row 105: Change in other assets and liabilities | Value: 1695
+Row 113: Liquidation of intangibles and fixed assets | Value: 65
+Row 114: Liquidation of financial assets | Value: 0
+Row 118: Purchases of intangibles and fixed assets | Value: 13436
+Row 124: Net inflows from issue of securities (stock) and other equity instruments, and from capital contributions | Value: 0
+Row 129: Payment of liabilities under financial lease agreements | Value: 427
+Row 161: Net profit (loss) attributable to equity holders of the parent entity | Value: 184272
+Row 164: ASSETS | Value: N/A
+Row 166: Fixed assets | Value: 258617
+Row 167: Tangible assets | Value: 16022
+Row 168: Intangible assets | Value: 44741
+Row 173: Deferred income tax assets | Value: 0
+Row 175: WORKING ASSETS | Value: 660328
+Row 180: Other financial assets | Value: 0
+Row 183: Other monetary assets | Value: 580529
+Row 184: TOTAL ASSETS | Value: 918945
+Row 187: LIABILITIES | Value: N/A
+Row 189: EQUITY | Value: 858547
+Row 190: Equity attributable to shareholders of the parent company | Value: 858547
+Row 197: Noncontrolling interest equity | Value: 0
+Row 198: LONG-TERM LIABILITIES | Value: 5039
+Row 199: Other financial liabilities | Value: 148
+Row 200: Deferred income tax liabilities | Value: 2830
+Row 202: Provisions for employee benefits and similar liabilities | Value: 78
+Row 203: SHORT-TERM LIABILITIES | Value: 55359
+Row 205: Other financial liabilities | Value: 190
+Row 206: Trade liabilities | Value: 9256
+Row 207: Liabilities from current income tax | Value: 2227
+Row 208: Other liabilities | Value: 2058
+Row 210: Provisions for retirement benefits and similar liabilities | Value: 1
+Row 212: TOTAL LIABILITIES | Value: 918945
+
+--- SCANNING YEAR 2020 ---
+Row 26: Net profit (loss) attributable to equity holders of parent entity  | Value: 1154327
+Row 42: Total comprehensive income attributable to equity holders of CD PROJEKT S.A. | Value: 1154962
+Row 46: ASSETS | Value: N/A
+Row 47: FIXED ASSETS | Value: 764178
+Row 48: Tangible assets | Value: 105349
+Row 55: Other financial assets | Value: 51588
+Row 57: Deferred income tax assets | Value: 15182
+Row 59: WORKING ASSETS | Value: 2130300
+Row 64: Other financial assets | Value: 106444
+Row 68: Fixed assets held for sale | Value: 0
+Row 69: TOTAL ASSETS | Value: 2894478
+Row 71: LIABILITIES | Value: N/A
+Row 72: EQUITY | Value: 2187356
+Row 73: Equity attributable to shareholders of the parent entity | Value: 2187356
+Row 81: Minority interest equity | Value: N/A
+Row 82: LONG-TERM LIABILITIES | Value: 166153
+Row 83: Other financial liabilities | Value: 16006
+Row 84: Other long-term liabilities | Value: 3173
+Row 85: Deferred income tax liabilities | Value: 0
+Row 87: Provisions for employee benefits and similar liabilities | Value: 398
+Row 89: SHORT-TERM LIABILITIES | Value: 540969
+Row 91: Other financial liabilities | Value: 2933
+Row 92: Trade liabilities | Value: 115444
+Row 93: Current income tax liabilities | Value: 1742
+Row 94: Other liabilities | Value: 33134
+Row 96: Provisions for employee benefits and similar liabilities | Value: 4
+Row 98: TOTAL LIABILITIES | Value: 2894478
+Row 106: Depreciation of fixed assets, intangibles, expenditures on development projects and investment properties | Value: 13559
+Row 114: Change in liabilities excluding credits and loans | Value: 77319
+Row 115: Change in other assets and liabilities | Value: -100033
+Row 124: Disposal of intangibles and fixed assets | Value: 22
+Row 125: Cash assets gained in the acquisition of an enterprise | Value: 0
+Row 127: Disposal of financial assets | Value: 0
+Row 134: Purchases of intangibles and fixed assets | Value: 18516
+Row 153: Dividends and other payments due to equity holders | Value: 0
+Row 155: Payment of liabilities arising from lease agreements | Value: 2857
+Row 187: Net profit (loss) attributable to equity holders of parent entity  | Value: 1133629
+Row 192: ASSETS | Value: N/A
+Row 194: Fixed assets | Value: 748623
+Row 195: Tangible assets | Value: 102971
+Row 203: Other financial assets | Value: 51588
+Row 205: Deferred income tax assets | Value: 15478
+Row 207: WORKING ASSETS | Value: 2012477
+Row 212: Other financial assets | Value: 106365
+Row 216: Fixed assets held for sale | Value: 0
+Row 217: TOTAL ASSETS | Value: 2761100
+Row 220: LIABILITIES | Value: N/A
+Row 222: EQUITY | Value: 2139166
+Row 223: Equity attributable to shareholders of the parent entity | Value: 2139166
+Row 231: Minority interest equity | Value: 0
+Row 232: LONG-TERM LIABILITIES | Value: 166079
+Row 233: Other financial liabilities | Value: 16006
+Row 234: Other long-term liabilities | Value: 3173
+Row 235: Deferred income tax liabilities | Value: 0
+Row 237: Provisions for employee benefits and similar liabilities | Value: 377
+Row 239: SHORT-TERM LIABILITIES | Value: 455855
+Row 241: Other financial liabilities | Value: 2875
+Row 242: Trade liabilities | Value: 73633
+Row 243: Current income tax liabilities | Value: 1384
+Row 244: Other liabilities | Value: 4980
+Row 246: Provisions for employee benefits and similar liabilities | Value: 3
+Row 248: TOTAL LIABILITIES | Value: 2761100
+
+--- SCANNING YEAR 2025 ---
+Row 42: EBITDA calculated as the sum of Operating Profit, Depreciation and amortization of property, plant and equipment, intangible assets, expenditure on development projects and investment properties and Amortization of development projects recognized as cost of goods sold | Value: N/A
+Row 62: ASSETS | Value: N/A
+Row 63: NON-CURRENT ASSETS | Value: 2168647
+Row 65: Intangible assets | Value: 64401
+Row 71: Other financial assets | Value: 371566
+Row 73: Deferred tax assets | Value: 114603
+Row 75: CURRENT ASSETS | Value: 1334673
+Row 80: Other financial assets  | Value: 332597
+Row 84: Fixed assets held for sale | Value: 0
+Row 85: TOTAL ASSETS | Value: 3503320
+Row 87: LIABILITIES AND EQUITY | Value: N/A
+Row 88: EQUITY | Value: 3289859
+Row 89: Equity of the shareholders of CD PROJEKT S.A. | Value: 3289859
+Row 98: NON-CURRENT LIABILITIES | Value: 33157
+Row 99: Other financial liabilities | Value: 21743
+Row 100: Other liabilities | Value: 2085
+Row 105: CURRENT LIABILITIES | Value: 180304
+Row 106: Other financial liabilities  | Value: 7860
+Row 108: Current income tax liabilities | Value: 0
+Row 109: Other liabilities  | Value: 7297
+Row 113: TOTAL EQUITY AND LIABILITIES | Value: 3503320
+Row 122: Depreciation and amortization of property, plant and equipment, intangible assets, expenditure on development projects and investment properties | Value: 12148
+Row 130: Increase/(Decrease) in liabilities, excluding loans and borrowings | Value: 4975
+Row 131: Change in other assets and liabilities | Value: 17076
+Row 141: Sale of intangible assets and property, plant and equipment | Value: 228
+Row 142: Cash assets gained in the acquisition of an enterprise | Value: 0
+Row 144: Disposal of financial assets | Value: 0
+Row 154: Acquisition of intangible assets and property, plant and equipment | Value: 99517
+Row 156: Expenditure on intangible assets | Value: 0
+Row 163: Purchase of private equity interests in the gaming sector | Value: 62
+Row 175: Payment of finance lease liabilities | Value: 17
+Row 182: Payment of lease liabilities | Value: 4122

@@ -1,0 +1,184 @@
+--- ALL LABELS IN 2025 SHEET ---
+Row 0: Prepared on the basis of the Consolidated financial statement of the CD PROJEKT Group, published on March 19th, 2026. | Value: N/A
+Row 3: The consolidated income statement of the 
+CD PROJEKT Group  | Value: N/A
+Row 4: CONSOLIDATED INCOME STATEMENT | Value: N/A
+Row 5: Sales revenue | Value: 866989
+Row 6: Sales of products | Value: 827306
+Row 7: Sales of services | Value: 5
+Row 8: Sales of goods for resale and materials | Value: 39678
+Row 9: Cost of sales of finished goods, services, goods for resale and materials | Value: 78973
+Row 10: Costs of products and services sold | Value: 53210
+Row 11: Cost of goods for resale and materials sold | Value: 25763
+Row 12: Gross profit on sales | Value: 788016
+Row 13: Selling expenses | Value: 119214
+Row 14: Total administrative expenses, including:  | Value: 224031
+Row 15: costs of research projects | Value: 38601
+Row 16: Other operating income | Value: 34703
+Row 17: Other operating expenses | Value: 8613
+Row 18: (Impairment)/reversal of impairment of financial instruments | Value: -213
+Row 19: Operating profit | Value: 470648
+Row 20: Finance income | Value: 109497
+Row 21: Finance costs | Value: 41826
+Row 22: Profit before tax  | Value: 538319
+Row 23: Income tax | Value: 17450
+Row 24: Net profit on continuing operations  | Value: 520869
+Row 25: Net profit on discontinued operations  | Value: 73839
+Row 26: Net profit | Value: 594708
+Row 28: Net earnings per share (in PLN) | Value: N/A
+Row 29: Basic for the reporting period | Value: 5.95
+Row 30: Diluted for the reporting period | Value: 5.9
+Row 31: Net earnings on continuing operations per share (in PLN)  | Value: N/A
+Row 32: Basic for the reporting period | Value: 5.21
+Row 33: Diluted for the reporting period | Value: 5.17
+Row 34: Net earnings on discontinued operations per share (in PLN)  | Value: N/A
+Row 35: Basic for the reporting period | Value: 0.74
+Row 36: Diluted for the reporting period | Value: 0.73
+Row 37: * dane przekształcone / restated data | Value: N/A
+Row 40: CONSOLIDATED INCOME STATEMENT | Value: N/A
+Row 41: EBITDA | Value: 539317
+Row 42: EBITDA calculated as the sum of Operating Profit, Depreciation and amortization of property, plant and equipment, intangible assets, expenditure on development projects and investment properties and Amortization of development projects recognized as cost of goods sold | Value: N/A
+Row 45: Consolidated statement of comprehensive income of the 
+CD PROJEKT Group  | Value: N/A
+Row 46: CONSOLIDATED STATEMENT OF COMPREHENSIVE INCOME | Value: N/A
+Row 47: Net profit | Value: 594708
+Row 48: Other comprehensive income subject to reclassification to gains or losses after specific conditions have been met: | Value: -4373
+Row 49: Exchange differences on measurement of foreign operations | Value: -6901
+Row 50: Measurement of derivative financial instruments – fair value through other comprehensive income, taking into account the tax effect | Value: 2528
+Row 51: Other comprehensive income not subject to reclassification to gains or losses | Value: -607
+Row 52: Actuarial gains or losses  | Value: -663
+Row 53: Income tax  | Value: 56
+Row 54: Total other comprehensive income  | Value: -4980
+Row 55: Total comprehensive income, including:  | Value: 589728
+Row 56: Total comprehensive income on continuing operations  | Value: 516903
+Row 57: Total comprehensive income on discontinued operations  | Value: 72825
+Row 58: * dane przekształcone / restated data | Value: N/A
+Row 61: The consolidated statement of financial position of the 
+CD PROJEKT Group  | Value: N/A
+Row 62: ASSETS | Value: N/A
+Row 63: NON-CURRENT ASSETS | Value: 2168647
+Row 64: Property, plant and equipment | Value: 335357
+Row 65: Intangible assets | Value: 64401
+Row 66: Expenditure on development projects | Value: 1148143
+Row 67: Goodwill | Value: 88899
+Row 68: Investment properties | Value: 31241
+Row 69: Perpetual usufruct of land | Value: 0
+Row 70: Shares in non-consolidated subordinated entities | Value: 10770
+Row 71: Other financial assets | Value: 371566
+Row 72: Prepayments and deferred costs | Value: 3233
+Row 73: Deferred tax assets | Value: 114603
+Row 74: Other receivables | Value: 434
+Row 75: CURRENT ASSETS | Value: 1334673
+Row 76: Inventories | Value: 2279
+Row 77: Trade receivables | Value: 125441
+Row 78: Current income tax receivable | Value: 11305
+Row 79: Other receivables  | Value: 215194
+Row 80: Other financial assets  | Value: 332597
+Row 81: Prepayments and deferred costs  | Value: 12929
+Row 82: Bank deposits over 3 months | Value: 520813
+Row 83: Cash and cash equivalents | Value: 114115
+Row 84: Fixed assets held for sale | Value: 0
+Row 85: TOTAL ASSETS | Value: 3503320
+Row 86: * dane przekształcone / restated data | Value: N/A
+Row 87: LIABILITIES AND EQUITY | Value: N/A
+Row 88: EQUITY | Value: 3289859
+Row 89: Equity of the shareholders of CD PROJEKT S.A. | Value: 3289859
+Row 90: Share capital | Value: 99911
+Row 91: Supplementary capital  | Value: 2400607
+Row 92: Share premium | Value: 116700
+Row 93: Treasury shares | Value: -22424
+Row 94: Other reserves | Value: 133553
+Row 95: Foreign exchange differences on translation | Value: -6470
+Row 96: Retained earnings/(Accumulated losses) | Value: -26726
+Row 97: Net profit (loss) for the period | Value: 594708
+Row 98: NON-CURRENT LIABILITIES | Value: 33157
+Row 99: Other financial liabilities | Value: 21743
+Row 100: Other liabilities | Value: 2085
+Row 101: Deferred tax provision | Value: 0
+Row 102: Deferred income | Value: 6642
+Row 103: Provision for retirement and similar benefits | Value: 1713
+Row 104: Other provisions | Value: 974
+Row 105: CURRENT LIABILITIES | Value: 180304
+Row 106: Other financial liabilities  | Value: 7860
+Row 107: Trade payables | Value: 46447
+Row 108: Current income tax liabilities | Value: 0
+Row 109: Other liabilities  | Value: 7297
+Row 110: Deferred income  | Value: 11104
+Row 111: Provision for retirement and similar benefits | Value: 12442
+Row 112: Other provisions  | Value: 95154
+Row 113: TOTAL EQUITY AND LIABILITIES | Value: 3503320
+Row 114: * dane przekształcone / restated data | Value: N/A
+Row 117: The consolidated statement of cash flows of the 
+CD PROJEKT Group  | Value: N/A
+Row 118: STATEMENT OF CASH FLOWS | Value: N/A
+Row 119: OPERATING ACTIVITIES | Value: N/A
+Row 120: Net profit | Value: 594708
+Row 121: Total adjustments: | Value: 13424
+Row 122: Depreciation and amortization of property, plant and equipment, intangible assets, expenditure on development projects and investment properties | Value: 12148
+Row 123: Amortization of development projects recognized as cost of goods sold | Value: 56521
+Row 124: Foreign exchange (gains)/losses | Value: 22300
+Row 125: Interest and participation in profits | Value: -68012
+Row 126: (Gains)/losses on investing activities | Value: -97282
+Row 127: Increase/(Decrease) in provisions | Value: 8219
+Row 128: (Increase)/Decrease in inventories | Value: -477
+Row 129: (Increase)/Decrease in receivables | Value: 9815
+Row 130: Increase/(Decrease) in liabilities, excluding loans and borrowings | Value: 4975
+Row 131: Change in other assets and liabilities | Value: 17076
+Row 132: Costs of share-based incentive plans  | Value: 43195
+Row 133: Other adjustments | Value: 4946
+Row 134: Cash from operating activities | Value: 608132
+Row 135: Income tax expense | Value: 2215
+Row 136: Withholding tax paid abroad | Value: 19872
+Row 137: Income tax (paid)/refunded | Value: -39339
+Row 138: Net cash from operating activities | Value: 590880
+Row 139: INVESTING ACTIVITIES | Value: N/A
+Row 140: Cash inflows | Value: 1700939
+Row 141: Sale of intangible assets and property, plant and equipment | Value: 228
+Row 142: Cash assets gained in the acquisition of an enterprise | Value: 0
+Row 143: Reimbursement of advance payment for investment properties and perpetual usufruct of land | Value: 0
+Row 144: Disposal of financial assets | Value: 0
+Row 145: Sales of shares in subsidiaries | Value: 0
+Row 146: Repayment of loans granted | Value: 0
+Row 147: Expiry of bank deposits over 3 months | Value: 1023887
+Row 148: Redemption of bonds | Value: 608260
+Row 149: Interest on bonds | Value: 17443
+Row 150: Interest from bank deposits | Value: 30228
+Row 151: Inflows from execution of forward contracts | Value: 20424
+Row 152: Other inflows from investing activities | Value: 469
+Row 153: Cash outflows | Value: 2175521
+Row 154: Acquisition of intangible assets and property, plant and equipment | Value: 99517
+Row 155: Expenditure on development projects | Value: 513241
+Row 156: Expenditure on intangible assets | Value: 0
+Row 157: Acquisition of an enterprise | Value: 0
+Row 158: Acquisition of investment properties and capitalization of expenditure | Value: 25340
+Row 159: Loans granted | Value: 0
+Row 160: Capital contributions at subsidiary | Value: 0
+Row 161: Acquisition of subsidiary | Value: 0
+Row 162: Purchase of shares in a subsidiary | Value: 0
+Row 163: Purchase of private equity interests in the gaming sector | Value: 62
+Row 164: Advance payment for investment properties | Value: 0
+Row 165: Opening bank deposits (maturity beyond 3 months) | Value: 1032168
+Row 166: Purchase of bonds and cost of their purchase | Value: 477004
+Row 167: Balance of GOG’s cash and cash equivalents as at the date of disposal | Value: 23209
+Row 168: Transaction-related expenses relating to sale of shares | Value: 4980
+Row 169: Net cash from investing activities | Value: -474582
+Row 170: * dane przekształcone / restated data | Value: N/A
+Row 171: FINANCING ACTIVITIES | Value: N/A
+Row 172: Cash inflows | Value: 20
+Row 173: Net proceeds from the sale of shares and issue of shares in the execution of the incentive plan | Value: 0
+Row 174: Credits and loans | Value: 0
+Row 175: Payment of finance lease liabilities | Value: 17
+Row 176: Interest payments | Value: 3
+Row 177: Cash outflows | Value: 127089
+Row 178: Increase in share capital of subsidiary company | Value: 0
+Row 179: Purchase of treasury shares for redemption | Value: 0
+Row 180: Dividends and other distributions to shareholders | Value: 99911
+Row 181: Purchase of own shares in order to enable exercise of options granted under the incentive program | Value: 22424
+Row 182: Payment of lease liabilities | Value: 4122
+Row 183: Interest paid | Value: 632
+Row 184: Net cash used in financing activities | Value: -127069
+Row 185: Net increase/(decrease) in cash and cash equivalents | Value: -10771
+Row 186: Change in cash and cash equivalents in the balance sheet | Value: -10771
+Row 187: Cash and cash equivalents as at the beginning of the period | Value: 124886
+Row 188: Cash and cash equivalents as at the end of the period | Value: 114115
+Row 189: * dane przekształcone / restated data | Value: N/A
