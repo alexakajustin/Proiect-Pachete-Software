@@ -173,9 +173,51 @@ proc logistic data=work.ml_data descending;
     score data=work.ml_data out=work.ml_predictions;
 run;
 
-title "Predictii Model (Selectie)";
+title "Predictii Model (Date Istorice - Selectie)";
 proc print data=work.ml_predictions(obs=10);
     var Year Este_Excelent P_1;
+run;
+
+/* --- PREDICTIE PENTRU VIITOR --- */
+/* Pentru a raspunde nevoii de business de a cunoaste sume exacte, vom 
+   folosi atat Regresie Logistica (pentru probabilitatea de succes) 
+   cat si Regresie Liniara (PROC REG din Seminarul 4) pentru a prezice
+   suma exacta a Veniturilor (Revenue) pentru anul 2026. */
+
+/* Cream setul de date pentru viitor cu scenariul de buget propus */
+data work.date_viitoare;
+    input Year MarketingCosts Assets;
+    /* Lasam Revenue si Performanta goale, ele vor fi prezise */
+    datalines;
+2026 250000 3800000
+;
+run;
+
+/* Imbinam datele viitoare cu cele istorice pentru a facilita predictia */
+data work.date_complete;
+    set work.ml_data work.date_viitoare;
+run;
+
+title "1. Predictia sumei exacte a Veniturilor pentru 2026 (PROC REG)";
+proc reg data=work.date_complete;
+    model Revenue = MarketingCosts Assets;
+    /* Generam predictiile matematice si filtram sa afiseze doar anul 2026 */
+    output out=work.rezultat_regresie(where=(Year=2026)) p=Venit_Estimat;
+run;
+
+proc print data=work.rezultat_regresie;
+    var Year MarketingCosts Assets Venit_Estimat;
+    format Venit_Estimat COMMA15.2;
+run;
+
+title "2. Predictia riscului/probabilitatii de a fi un an Excelent (PROC LOGISTIC)";
+proc logistic data=work.ml_data descending;
+    model Este_Excelent = MarketingCosts Assets;
+    score data=work.date_viitoare out=work.predictie_logistic;
+run;
+
+proc print data=work.predictie_logistic;
+    var Year MarketingCosts Assets P_1;
 run;
 
 /* Stergerea titlului final */

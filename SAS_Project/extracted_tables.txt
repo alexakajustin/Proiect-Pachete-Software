@@ -1,0 +1,250 @@
+### Table 0
+Year|Revenue|NetProfit|Profit_Margin|Performanta|Eveniment_Major
+2017|463184|Profit Ridicat|43.24|Excelenta|An Intermediar
+2018|362901|Profit Moderat|30.13|Excelenta|An Intermediar
+2019|521272|Profit Moderat|33.63|Excelenta|An Intermediar
+2020|2138875|Profit Ridicat|53.97|Excelenta|Lansare Cyberpunk 2077
+2021|888172|Profit Ridicat|23.52|Stabila|An Intermediar
+2022|952576|Profit Ridicat|36.44|Excelenta|An Intermediar
+2023|1230199|Profit Ridicat|39.11|Excelenta|An Intermediar
+2024|985030|Profit Ridicat|47.7|Excelenta|An Intermediar
+2025|866989|Profit Ridicat|60.08|Excelenta|An Intermediar
+
+
+### Table 1
+Table of Performanta by Eveniment_Major|Table of Performanta by Eveniment_Major|Table of Performanta by Eveniment_Major|Table of Performanta by Eveniment_Major
+Performanta|Eveniment_Major|Eveniment_Major|Eveniment_Major
+Performanta|An Intermediar|Lansare Cyberpunk 2077|Total
+Frequency|||
+Excelenta|7|1.0|8.0
+Stabila|1|0.0|1.0
+Total|8|1.0|9.0
+Frequency|Table of Performanta by Eveniment_Major Performanta Eveniment_Major An Intermediar Lansare Cyberpunk 2077 Total Excelenta 7 1 8 Stabila 1 0 1 Total 8 1 9||
+
+
+### Table 2
+Frequency
+
+
+### Table 3
+Table of Performanta by Eveniment_Major|Table of Performanta by Eveniment_Major|Table of Performanta by Eveniment_Major|Table of Performanta by Eveniment_Major
+Performanta|Eveniment_Major|Eveniment_Major|Eveniment_Major
+Performanta|An Intermediar|Lansare Cyberpunk 2077|Total
+Excelenta|7|1|8
+Stabila|1|0|1
+Total|8|1|9
+
+
+### Table 4
+Year|N Obs|Variable|Mean|Minimum|Maximum|Std Dev
+Deceniul 2010s|3|Revenue NetProfit MarketingCosts|449119.00 161639.67 114399.00|362901.00 109334.00 107183.00|521272.00 200270.00 125341.00|80116.86 46985.10 9635.38
+Deceniul 2020s|6|Revenue NetProfit MarketingCosts|1176973.50 530362.67 237994.83|866989.00 208908.00 119214.00|2138875.00 1154327.00 408016.00|488831.40 326321.22 107308.80
+
+
+### Table 5
+0|1
+2 With Variables:|Revenue NetProfit
+2 Variables:|MarketingCosts Assets
+
+
+### Table 6
+Simple Statistics|Simple Statistics|Simple Statistics|Simple Statistics|Simple Statistics|Simple Statistics|Simple Statistics
+Variable|N|Mean|Std Dev|Sum|Minimum|Maximum
+Revenue|9|934355|532349|8409198|362901|2138875
+NetProfit|9|407455|317954|3667095|109334|1154327
+MarketingCosts|9|196796|105068|1771166|107183|408016
+Assets|9|2222109|889816|19998978|981513|3503320
+
+
+### Table 7
+"Pearson Correlation Coefficients, N = 9 Prob > |r| under H0: Rho=0"|"Pearson Correlation Coefficients, N = 9 Prob > |r| under H0: Rho=0"|"Pearson Correlation Coefficients, N = 9 Prob > |r| under H0: Rho=0"
+Unnamed: 0_level_1|MarketingCosts|Assets
+Revenue|0.86595 0.0025|0.64206 0.0623
+NetProfit|0.70289 0.0347|0.66732 0.0496
+
+
+### Table 8
+Model Information|Model Information.1
+Data Set|WORK.ML_DATA
+Response Variable|Este_Excelent
+Number of Response Levels|2
+Model|binary logit
+Optimization Technique|Fisher's scoring
+
+
+### Table 9
+0|1
+Number of Observations Read|9
+Number of Observations Used|9
+
+
+### Table 10
+Response Profile|Response Profile|Response Profile
+Ordered Value|Este_Excelent|Total Frequency
+1|1|8
+2|0|1
+
+
+### Table 11
+Model Convergence Status
+Complete separation of data points detected.
+
+
+### Table 12
+Model Fit Statistics|Model Fit Statistics|Model Fit Statistics
+Criterion|Intercept Only|Intercept and Covariates
+AIC|8.279|6.226
+SC|8.476|6.818
+-2 Log L|6.279|0.226
+
+
+### Table 13
+Testing Global Null Hypothesis: BETA=0|Testing Global Null Hypothesis: BETA=0|Testing Global Null Hypothesis: BETA=0|Testing Global Null Hypothesis: BETA=0
+Test|Chi-Square|DF|Pr > ChiSq
+Likelihood Ratio|6.0531|2|0.0485
+Score|1.4614|2|0.4816
+Wald|1.0656|2|0.5869
+
+
+### Table 14
+Analysis of Maximum Likelihood Estimates|Analysis of Maximum Likelihood Estimates|Analysis of Maximum Likelihood Estimates|Analysis of Maximum Likelihood Estimates|Analysis of Maximum Likelihood Estimates|Analysis of Maximum Likelihood Estimates
+Parameter|DF|Estimate|Standard Error|Wald Chi-Square|Pr > ChiSq
+Intercept|1|-44.7288|46.3672|0.9306|0.3347
+MarketingCosts|1|-0.00115|0.00112|1.0495|0.3056
+Assets|1|0.000179|0.000175|1.0427|0.3072
+
+
+### Table 15
+Odds Ratio Estimates|Odds Ratio Estimates|Odds Ratio Estimates|Odds Ratio Estimates
+Effect|Point Estimate|95% Wald Confidence Limits|95% Wald Confidence Limits.1
+MarketingCosts|0.999|0.997|1.001
+Assets|1.0|1.0|1.001
+
+
+### Table 16
+Association of Predicted Probabilities and Observed Responses|Association of Predicted Probabilities and Observed Responses.1|Association of Predicted Probabilities and Observed Responses.2|Association of Predicted Probabilities and Observed Responses.3
+Percent Concordant|100.0|Somers' D|1.0
+Percent Discordant|0.0|Gamma|1.0
+Percent Tied|0.0|Tau-a|0.222
+Pairs|8.0|c|1.0
+
+
+### Table 17
+Obs|Year|Este_Excelent|P_1
+1|2017|1|0.96966
+2|2018|1|1.0
+3|2019|1|1.0
+4|2020|1|0.96541
+5|2021|0|0.04583
+6|2022|1|1.0
+7|2023|1|1.0
+8|2024|1|1.0
+9|2025|1|1.0
+
+
+### Table 18
+0|1
+Number of Observations Read|10
+Number of Observations Used|9
+Number of Observations with Missing Values|1
+
+
+### Table 19
+Analysis of Variance|Analysis of Variance|Analysis of Variance|Analysis of Variance|Analysis of Variance|Analysis of Variance
+Source|DF|Sum of Squares|Mean Square|F Value|Pr > F
+Model|2|1984861000000.0|992430400000.0|21.09|0.0019
+Error|6|282301700000.0|47050283965.0||
+Corrected Total|8|2267162000000.0|||
+
+
+### Table 20
+0|1|2|3
+Root MSE|216911.0|R-Square|0.8755
+Dependent Mean|934355.0|Adj R-Sq|0.834
+Coeff Var|23.21502||
+
+
+### Table 21
+Parameter Estimates|Parameter Estimates|Parameter Estimates|Parameter Estimates|Parameter Estimates|Parameter Estimates
+Variable|DF|Parameter Estimate|Standard Error|t Value|"Pr > |t|"
+Intercept|1|-297872.0|219839.0|-1.35|0.2242
+MarketingCosts|1|3.69562|0.78221|4.72|0.0032
+Assets|1|0.22724|0.09236|2.46|0.0491
+
+
+### Table 22
+Obs|Year|MarketingCosts|Assets|Venit_Estimat
+1|2026|250000|3800000|1489530.33
+
+
+### Table 23
+Model Information|Model Information.1
+Data Set|WORK.ML_DATA
+Response Variable|Este_Excelent
+Number of Response Levels|2
+Model|binary logit
+Optimization Technique|Fisher's scoring
+
+
+### Table 24
+0|1
+Number of Observations Read|9
+Number of Observations Used|9
+
+
+### Table 25
+Response Profile|Response Profile|Response Profile
+Ordered Value|Este_Excelent|Total Frequency
+1|1|8
+2|0|1
+
+
+### Table 26
+Model Convergence Status
+Complete separation of data points detected.
+
+
+### Table 27
+Model Fit Statistics|Model Fit Statistics|Model Fit Statistics
+Criterion|Intercept Only|Intercept and Covariates
+AIC|8.279|6.226
+SC|8.476|6.818
+-2 Log L|6.279|0.226
+
+
+### Table 28
+Testing Global Null Hypothesis: BETA=0|Testing Global Null Hypothesis: BETA=0|Testing Global Null Hypothesis: BETA=0|Testing Global Null Hypothesis: BETA=0
+Test|Chi-Square|DF|Pr > ChiSq
+Likelihood Ratio|6.0531|2|0.0485
+Score|1.4614|2|0.4816
+Wald|1.0656|2|0.5869
+
+
+### Table 29
+Analysis of Maximum Likelihood Estimates|Analysis of Maximum Likelihood Estimates|Analysis of Maximum Likelihood Estimates|Analysis of Maximum Likelihood Estimates|Analysis of Maximum Likelihood Estimates|Analysis of Maximum Likelihood Estimates
+Parameter|DF|Estimate|Standard Error|Wald Chi-Square|Pr > ChiSq
+Intercept|1|-44.7288|46.3672|0.9306|0.3347
+MarketingCosts|1|-0.00115|0.00112|1.0495|0.3056
+Assets|1|0.000179|0.000175|1.0427|0.3072
+
+
+### Table 30
+Odds Ratio Estimates|Odds Ratio Estimates|Odds Ratio Estimates|Odds Ratio Estimates
+Effect|Point Estimate|95% Wald Confidence Limits|95% Wald Confidence Limits.1
+MarketingCosts|0.999|0.997|1.001
+Assets|1.0|1.0|1.001
+
+
+### Table 31
+Association of Predicted Probabilities and Observed Responses|Association of Predicted Probabilities and Observed Responses.1|Association of Predicted Probabilities and Observed Responses.2|Association of Predicted Probabilities and Observed Responses.3
+Percent Concordant|100.0|Somers' D|1.0
+Percent Discordant|0.0|Gamma|1.0
+Percent Tied|0.0|Tau-a|0.222
+Pairs|8.0|c|1.0
+
+
+### Table 32
+Obs|Year|MarketingCosts|Assets|P_1
+1|2026|250000|3800000|1
+
+
