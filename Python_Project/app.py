@@ -14,7 +14,7 @@ df = load_data()
 st.sidebar.markdown("""
 <div style="text-align:center; padding: 10px;">
     <h2 style="color:#f3e600; font-family:'Orbitron',monospace; font-size:1.1rem; margin:0;">CD PROJEKT RED</h2>
-    <p style="color:#00e5ff; font-size:0.8rem; margin:5px 0;">Analiză Financiară 2017–2025</p>
+    <p style="color:#00e5ff; font-size:0.8rem; margin:5px 0;">Analiză Financiară 2010–2025</p>
     <hr style="border-color:#f3e60033;">
 </div>
 """, unsafe_allow_html=True)
