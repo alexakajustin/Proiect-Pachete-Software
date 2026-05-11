@@ -1,0 +1,300 @@
+================================================================================
+DUMP COMPLET: TOATE REZULTATELE APLICAȚIEI STREAMLIT CDPR
+================================================================================
+
+--- 1. SUMAR EXECUTIV & EVOLUȚIA FINANCIARĂ ---
+📈 Evoluție Venituri, Structura Profitabilității, Costuri vs Profit
+ Year   Revenue  NetProfit  MarketingCosts  RD_Expenditure
+ 2010   50446.0    -3451.0         19602.0             NaN
+ 2011  136210.0    23962.0         37981.0             NaN
+ 2012  164040.0    28125.0         25243.0             NaN
+ 2013  142172.0    14851.0         22377.0             NaN
+ 2014   96194.0     4679.0         18484.0             NaN
+ 2015  798014.0   342430.0         62108.0             NaN
+ 2016  583903.0   250514.0        141784.0             NaN
+ 2017  463184.0   200270.0        110673.0        142486.0
+ 2018  362901.0   109334.0        107183.0        242816.0
+ 2019  521272.0   175315.0        125341.0        385848.0
+ 2020 2138875.0  1154327.0        408016.0        406798.0
+ 2021  888172.0   208908.0        299225.0        350195.0
+ 2022  952576.0   347093.0        222350.0        473202.0
+ 2023 1230199.0   481105.0        243796.0        527182.0
+ 2024  985030.0   469874.0        135368.0        695421.0
+ 2025  866989.0   594708.0        119214.0       1148143.0
+
+--- TABEL COMPLET DATE FINANCIARE CDPR ---
+ Year   Revenue  OperatingProfit  NetProfit  MarketingCosts    Assets    Equity     Cash  Liabilities  North_America_Pct  Europe_Pct  Asia_Pct  Poland_Pct  Deposits  RD_Expenditure  GrossProfit  AdminExpenses   EBITDA           Era Profitability
+ 2010   50446.0           -675.0    -3451.0         19602.0  167514.0   77665.0  15610.0      89849.0              0.350       0.400     0.050       0.200       NaN             NaN          NaN            NaN      NaN Pre-Witcher 3    Low Profit
+ 2011  136210.0          27622.0    23962.0         37981.0  185726.0  123809.0   9819.0      61917.0              0.377       0.381     0.053       0.189       NaN             NaN          NaN            NaN      NaN Pre-Witcher 3    Low Profit
+ 2012  164040.0          28367.0    28125.0         25243.0  202892.0  151530.0  26866.0      51362.0              0.404       0.362     0.056       0.178       NaN             NaN          NaN            NaN      NaN Pre-Witcher 3    Low Profit
+ 2013  142172.0          14874.0    14851.0         22377.0  217635.0  167368.0  39684.0      50267.0              0.431       0.343     0.059       0.167       NaN             NaN          NaN            NaN      NaN Pre-Witcher 3    Low Profit
+ 2014   96194.0           6150.0     4679.0         18484.0  248937.0  168018.0  34395.0      80919.0              0.458       0.324     0.062       0.156     547.0             NaN          NaN            NaN      NaN Pre-Witcher 3    Low Profit
+ 2015  798014.0         424193.0   342430.0         62108.0  673946.0  513675.0 393637.0     160271.0              0.485       0.305     0.065       0.145     547.0             NaN          NaN            NaN      NaN Witcher 3 Era   High Profit
+ 2016  583903.0         303627.0   250514.0        141784.0  874960.0  776938.0 557204.0      98022.0              0.512       0.286     0.068       0.134     194.0             NaN          NaN            NaN      NaN Witcher 3 Era   High Profit
+ 2017  463184.0         240940.0   200270.0        110673.0  981513.0  882899.0  66987.0      98614.0              0.539       0.267     0.071       0.123     194.0        142486.0          NaN            NaN      NaN Witcher 3 Era    Low Profit
+ 2018  362901.0         112392.0   109334.0        107183.0 1126838.0 1002864.0 103878.0     123974.0              0.566       0.248     0.074       0.112       NaN        242816.0          NaN            NaN      NaN Witcher 3 Era    Low Profit
+ 2019  521272.0         180286.0   175315.0        125341.0 1404108.0 1105651.0  49406.0     298457.0              0.593       0.229     0.077       0.101       NaN        385848.0          NaN            NaN      NaN Witcher 3 Era    Low Profit
+ 2020 2138875.0        1157077.0  1154327.0        408016.0 2894478.0 2187356.0 563335.0     707122.0              0.620       0.210     0.080       0.090   51588.0        406798.0          NaN            NaN      NaN Cyberpunk Era   High Profit
+ 2021  888172.0         232903.0   208908.0        299225.0 2158735.0 1894356.0 411586.0     264379.0              0.647       0.191     0.083       0.079  178540.0        350195.0          NaN            NaN      NaN Cyberpunk Era   High Profit
+ 2022  952576.0         377347.0   347093.0        222350.0 2274124.0 2033404.0 277827.0     240720.0              0.674       0.172     0.086       0.068  337330.0        473202.0     708602.0        75536.0      NaN Cyberpunk Era   High Profit
+ 2023 1230199.0         469040.0   481105.0        243796.0 2613438.0 2403490.0 178054.0     209948.0              0.701       0.153     0.089       0.057  338205.0        527182.0     849632.0       166507.0      NaN Cyberpunk Era   High Profit
+ 2024  985030.0         365496.0   469874.0        135368.0 3042424.0 2800667.0 124886.0     241757.0              0.728       0.134     0.092       0.046  522524.0        695421.0     737878.0       248310.0      NaN Cyberpunk Era   High Profit
+ 2025  866989.0         470648.0   594708.0        119214.0 3503320.0 3289859.0 114115.0     213461.0              0.755       0.115     0.095       0.035  520813.0       1148143.0     788016.0       224031.0 539317.0 Cyberpunk Era   High Profit
+
+--- 2. DISTRIBUȚIA VENITURILOR PE REGIUNI ---
+Structura Veniturilor (Procente):
+ Year  North_America_Pct  Europe_Pct  Asia_Pct  Poland_Pct
+ 2010              0.350       0.400     0.050       0.200
+ 2011              0.377       0.381     0.053       0.189
+ 2012              0.404       0.362     0.056       0.178
+ 2013              0.431       0.343     0.059       0.167
+ 2014              0.458       0.324     0.062       0.156
+ 2015              0.485       0.305     0.065       0.145
+ 2016              0.512       0.286     0.068       0.134
+ 2017              0.539       0.267     0.071       0.123
+ 2018              0.566       0.248     0.074       0.112
+ 2019              0.593       0.229     0.077       0.101
+ 2020              0.620       0.210     0.080       0.090
+ 2021              0.647       0.191     0.083       0.079
+ 2022              0.674       0.172     0.086       0.068
+ 2023              0.701       0.153     0.089       0.057
+ 2024              0.728       0.134     0.092       0.046
+ 2025              0.755       0.115     0.095       0.035
+
+--- 3. ANALIZA VALORILOR LIPSĂ & OUTLIERS ---
+Analiza Valorilor Lipsă (Coloane și număr NaN):
+Deposits           6
+RD_Expenditure     7
+GrossProfit       12
+AdminExpenses     12
+EBITDA            15
+
+Detectarea Valorilor Extreme (IQR NetProfit):
+Q1: 27,084, Q3: 377,788, IQR: 350,704
+Outliers detectați:
+ Year  NetProfit
+ 2020  1154327.0
+
+--- 4. CODIFICAREA DATELOR (ENCODING) ---
+Codificare 1: Era de Dezvoltare (Label Encoding)
+ Year           Era  Era_LabelEncoded
+ 2010 Pre-Witcher 3                 1
+ 2011 Pre-Witcher 3                 1
+ 2012 Pre-Witcher 3                 1
+ 2013 Pre-Witcher 3                 1
+ 2014 Pre-Witcher 3                 1
+ 2015 Witcher 3 Era                 2
+ 2016 Witcher 3 Era                 2
+ 2017 Witcher 3 Era                 2
+ 2018 Witcher 3 Era                 2
+ 2019 Witcher 3 Era                 2
+ 2020 Cyberpunk Era                 0
+ 2021 Cyberpunk Era                 0
+ 2022 Cyberpunk Era                 0
+ 2023 Cyberpunk Era                 0
+ 2024 Cyberpunk Era                 0
+ 2025 Cyberpunk Era                 0
+
+Codificare 2: Nivel de Profitabilitate (Label Encoding Ordinal)
+ Year Profitability  Profitability_LabelEncoded
+ 2010    Low Profit                           1
+ 2011    Low Profit                           1
+ 2012    Low Profit                           1
+ 2013    Low Profit                           1
+ 2014    Low Profit                           1
+ 2015   High Profit                           0
+ 2016   High Profit                           0
+ 2017    Low Profit                           1
+ 2018    Low Profit                           1
+ 2019    Low Profit                           1
+ 2020   High Profit                           0
+ 2021   High Profit                           0
+ 2022   High Profit                           0
+ 2023   High Profit                           0
+ 2024   High Profit                           0
+ 2025   High Profit                           0
+
+Codificare 3: One-Hot Encoding (Era)
+ Year  Era_OHE_Cyberpunk Era  Era_OHE_Pre-Witcher 3  Era_OHE_Witcher 3 Era
+ 2010                  False                   True                  False
+ 2011                  False                   True                  False
+ 2012                  False                   True                  False
+ 2013                  False                   True                  False
+ 2014                  False                   True                  False
+ 2015                  False                  False                   True
+ 2016                  False                  False                   True
+ 2017                  False                  False                   True
+ 2018                  False                  False                   True
+ 2019                  False                  False                   True
+ 2020                   True                  False                  False
+ 2021                   True                  False                  False
+ 2022                   True                  False                  False
+ 2023                   True                  False                  False
+ 2024                   True                  False                  False
+ 2025                   True                  False                  False
+
+--- 5. METODE DE SCALARE PENTRU TOATE VARIABILELE ---
+StandardScaler (Media=0, Dev.Std=1):
+ Year   Revenue  NetProfit  MarketingCosts
+ 2010 -1.135110  -0.956990       -1.026964
+ 2011 -0.972400  -0.862820       -0.857791
+ 2012 -0.919602  -0.848519       -0.975040
+ 2013 -0.961090  -0.894118       -1.001421
+ 2014 -1.048318  -0.929062       -1.037255
+  ... (afișate primele 5 rânduri)
+
+MinMaxScaler (Între 0 și 1):
+ Year  Revenue  NetProfit  MarketingCosts
+ 2010 0.000000   0.000000        0.002870
+ 2011 0.041066   0.023677        0.050052
+ 2012 0.054392   0.027273        0.017352
+ 2013 0.043921   0.015808        0.009994
+ 2014 0.021905   0.007022        0.000000
+  ... (afișate primele 5 rânduri)
+
+RobustScaler (Ignoră Outliers):
+ Year   Revenue  NetProfit  MarketingCosts
+ 2010 -0.673383  -0.593207       -0.749959
+ 2011 -0.558371  -0.515041       -0.605389
+ 2012 -0.521051  -0.503171       -0.705586
+ 2013 -0.550376  -0.541020       -0.728130
+ 2014 -0.612034  -0.570025       -0.758753
+  ... (afișate primele 5 rânduri)
+
+--- 6. GRUPARE ȘI AGREGARI PANDAS ---
+Grupare 1: Era Witcher vs. Era Cyberpunk (Medii)
+                 Revenue      NetProfit
+Era                                    
+Cyberpunk Era  1176973.5  542669.166667
+Pre-Witcher 3   117812.4   13633.200000
+Witcher 3 Era   545854.8  215572.600000
+
+Grupare 2: Nivele de Profitabilitate (Medii)
+               MarketingCosts       Assets
+Profitability                             
+High Profit        203982.625  2254428.125
+Low Profit          58360.500   566895.375
+
+Grupare 3: Statistici Descriptive Agregate (Suma, Media, Max)
+                 Revenue                            NetProfit          
+                     sum       mean        max           mean       min
+Era                                                                    
+Cyberpunk Era  7061841.0  1176973.5  2138875.0  542669.166667  208908.0
+Pre-Witcher 3   589062.0   117812.4   164040.0   13633.200000   -3451.0
+Witcher 3 Era  2729274.0   545854.8   798014.0  215572.600000  109334.0
+
+Pivot: Eficiența Marketingului pe Eră (NetProfit mediu per categorie)
+Marketing_Level       Low         Medium       High
+Era                                                
+Cyberpunk Era         NaN  532291.000000  547858.25
+Pre-Witcher 3     13633.2            NaN        NaN
+Witcher 3 Era    342430.0  161639.666667  250514.00
+
+--- 7. REZULTATE REGRESIE LOGISTICĂ ---
+Coeficienții Modelului:
+Intercept: -0.2343
+MarketingCosts Coef: 1.1374
+Assets Coef: 1.0349
+
+Tabel Predicții vs. Realitate & Probabilitatea de profit ridicat pe an:
+ Year  Real_Profit_Status  Predicted_Status  Probability_of_High_Profit (%)
+ 2010                   0                 0                           17.94
+ 2011                   0                 0                           20.63
+ 2012                   0                 0                           18.96
+ 2013                   0                 0                           18.67
+ 2014                   0                 0                           18.38
+ 2015                   1                 0                           29.05
+ 2016                   1                 0                           47.96
+ 2017                   0                 0                           42.36
+ 2018                   0                 0                           43.33
+ 2019                   0                 1                           50.74
+ 2020                   1                 1                           96.40
+ 2021                   1                 1                           87.59
+ 2022                   1                 1                           78.97
+ 2023                   1                 1                           84.30
+ 2024                   1                 1                           71.51
+ 2025                   1                 1                           73.12
+
+--- 8. SUMAR MODEL OLS COMPLET ---
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:              NetProfit   R-squared:                       0.951
+Model:                            OLS   Adj. R-squared:                  0.944
+Method:                 Least Squares   F-statistic:                     126.5
+Date:                Mon, 11 May 2026   Prob (F-statistic):           3.02e-09
+Time:                        15:07:36   Log-Likelihood:                -199.86
+No. Observations:                  16   AIC:                             405.7
+Df Residuals:                      13   BIC:                             408.0
+Df Model:                           2                                         
+Covariance Type:            nonrobust                                         
+==================================================================================
+                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const          -5.672e+04   2.86e+04     -1.984      0.069   -1.18e+05    5033.246
+Revenue            0.7395      0.079      9.329      0.000       0.568       0.911
+MarketingCosts    -1.1278      0.385     -2.932      0.012      -1.959      -0.297
+==============================================================================
+Omnibus:                        0.664   Durbin-Watson:                   1.776
+Prob(Omnibus):                  0.717   Jarque-Bera (JB):                0.104
+Skew:                           0.197   Prob(JB):                        0.949
+Kurtosis:                       3.030   Cond. No.                     1.36e+06
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.36e+06. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+Tabel OLS: Predicții vs. Realitate (Eroare/Reziduri):
+ Year  NetProfit  Predicție_OLS  Reziduuri (Eroare)
+ 2010    -3451.0  -4.151837e+04        38067.370965
+ 2011    23962.0   1.179243e+03        22782.756985
+ 2012    28125.0   3.612590e+04        -8000.903374
+ 2013    14851.0   2.318608e+04        -8335.083531
+ 2014     4679.0  -6.425554e+03        11104.554358
+ 2015   342430.0   4.633926e+05      -120962.624220
+ 2016   250514.0   2.151949e+05        35319.079385
+ 2017   200270.0   1.610059e+05        39264.119310
+ 2018   109334.0   9.077964e+04        18554.364613
+ 2019   175315.0   1.874215e+05       -12106.459352
+ 2020  1154327.0   1.064892e+06        89434.657713
+ 2021   208908.0   2.626529e+05       -53744.923963
+ 2022   347093.0   3.969791e+05       -49886.087979
+ 2023   481105.0   5.781031e+05       -96998.090390
+ 2024   469874.0   5.190757e+05       -49201.706236
+ 2025   594708.0   4.499990e+05       144708.975717
+
+--- 9. CLUSTERIZARE K-MEANS ---
+Metoda Elbow — Determinarea k Optim (Inertia):
+K=1 -> Inertia: 48.00
+K=2 -> Inertia: 20.97
+K=3 -> Inertia: 8.30
+K=4 -> Inertia: 4.36
+K=5 -> Inertia: 1.97
+
+Rezultatele Clusterizării (pentru k=3):
+ Year   Revenue  NetProfit  MarketingCosts  Cluster
+ 2010   50446.0    -3451.0         19602.0        0
+ 2011  136210.0    23962.0         37981.0        0
+ 2012  164040.0    28125.0         25243.0        0
+ 2013  142172.0    14851.0         22377.0        0
+ 2014   96194.0     4679.0         18484.0        0
+ 2015  798014.0   342430.0         62108.0        2
+ 2016  583903.0   250514.0        141784.0        2
+ 2017  463184.0   200270.0        110673.0        0
+ 2018  362901.0   109334.0        107183.0        0
+ 2019  521272.0   175315.0        125341.0        0
+ 2020 2138875.0  1154327.0        408016.0        1
+ 2021  888172.0   208908.0        299225.0        2
+ 2022  952576.0   347093.0        222350.0        2
+ 2023 1230199.0   481105.0        243796.0        2
+ 2024  985030.0   469874.0        135368.0        2
+ 2025  866989.0   594708.0        119214.0        2
+
+Statistici Medii pe Cluster:
+              Revenue     NetProfit  MarketingCosts
+Cluster                                            
+0        2.420524e+05  6.913562e+04         58360.5
+1        2.138875e+06  1.154327e+06        408016.0
+2        9.006976e+05  3.849474e+05        174835.0
+

@@ -1,0 +1,84 @@
+================================================================================
+RAPORT DE ANALIZĂ DATĂ COMPLEXĂ: CD PROJEKT RED (2010 - 2025)
+================================================================================
+
+1. STATISTICI DESCRIPTIVE & PANDAS (Analiză Exploratorie)
+--------------------------------------------------
+Număr total de ani analizați: 16
+Venituri Totale (2010-2025): 10,380,177 PLN
+Profit Net Total: 4,402,044 PLN
+Media Anuală a Profitului: 275,128 PLN
+Anul cu cel mai mare profit: 2020.0 (1,154,327 PLN)
+
+Profit Mediu pe Epoci Istorice (Groupby):
+ - Pre-Witcher 3: 13,633 PLN
+ - Golden Era (W3): 215,573 PLN
+ - Cyberpunk Era: 542,669 PLN
+
+2. ANALIZA ANOMALIILOR (Outlier Detection prin IQR)
+--------------------------------------------------
+Prag inferior IQR: -498,972 | Prag superior IQR: 903,844
+Anomalii detectate (Ani atipici):
+ - Anul 2020: Profit 1,154,327 PLN (Depășește limitele statistice)
+
+3. MACHINE LEARNING SUPERVIZAT: Regresie Logistică
+--------------------------------------------------
+Concept (Ce înseamnă Supervised?):
+Învățarea supervizată presupune că modelul are un 'profesor'. Îi oferim variabile independente (Cheltuieli Marketing, Active) și îi dăm răspunsul corect (A fost anul profitabil sau nu? Da=1, Nu=0). Modelul învață relația dintre ele pentru a face predicții viitoare.
+
+Rezultate Model:
+Acuratețe globală: 81.25%
+Matricea de Confuzie (Confusion Matrix):
+ [ 7 (True Negatives)  |  1 (False Positives) ]
+ [ 2 (False Negatives) |  6 (True Positives)  ]
+
+Interpretare Matrice:
+- A ghicit corect 7 ani slabi și 6 ani profitabili.
+- A greșit la 3 ani.
+Coeficienți învățați: Marketing = 1.1374, Active = 1.0349
+
+4. ANALIZĂ ECONOMETRICĂ: Regresie Liniară Multiplă (OLS)
+--------------------------------------------------
+Coeficient de Determinare (R-squared): 0.6054 (60.5%)
+R-squared ajustat (Adj. R-squared): -0.1837
+F-statistic (Test de validitate globală): 0.7672 (Prob: 6.2815e-01)
+
+Analiza Variabilelor (P-values și Coeficienți):
+1. Venituri (Revenue):
+   - Coeficient: 0.4253
+   - P-value: 6.1003e-01
+   -> Nesemnificativ statistic (Posibil coliniaritate sau date insuficiente).
+2. Costuri Marketing:
+   - Coeficient: -1.8342
+   - P-value: 4.4053e-01
+
+5. MACHINE LEARNING NESUPERVIZAT: Clusterizare K-Means
+--------------------------------------------------
+Concept (Ce înseamnă Unsupervised?):
+Învățarea nesupervizată înseamnă că algoritmul NU are 'profesor'. Îi dăm datele brute (fără să-i spunem ce ani au fost buni sau răi) și îi cerem să găsească el singur tipare (pattern-uri) ascunse, formând grupuri de ani care seamănă între ei.
+
+Rezultate Clusterizare (K=3 grupuri):
+
+CLUSTERUL 0:
+- Ani incluși: [2010, 2011, 2012, 2013, 2014, 2017, 2018, 2019]
+- Caracteristicile centroidului (media grupului):
+    * Venituri Medii: 242,052 PLN
+    * Profit Net Mediu: 69,136 PLN
+    * Cost Marketing Mediu: 58,360 PLN
+-> INTERPRETARE: Anii de construcție/dezvoltare. Venituri mici, profit mic sau pierderi, timp dedicat creării următoarelor mari titluri.
+
+CLUSTERUL 1:
+- Ani incluși: [2020]
+- Caracteristicile centroidului (media grupului):
+    * Venituri Medii: 2,138,875 PLN
+    * Profit Net Mediu: 1,154,327 PLN
+    * Cost Marketing Mediu: 408,016 PLN
+-> INTERPRETARE: Aceștia sunt anii excepționali ('Blockbuster Releases' gen Cyberpunk), cu venituri uriașe și costuri de marketing colosale.
+
+CLUSTERUL 2:
+- Ani incluși: [2015, 2016, 2021, 2022, 2023, 2024, 2025]
+- Caracteristicile centroidului (media grupului):
+    * Venituri Medii: 900,698 PLN
+    * Profit Net Mediu: 384,947 PLN
+    * Cost Marketing Mediu: 174,835 PLN
+-> INTERPRETARE: Anii de dezvoltare stabilă / Long-tail sales (Vânzări susținute post-lansare, profit mare cu efort de marketing redus).
