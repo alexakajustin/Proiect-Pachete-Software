@@ -4,7 +4,7 @@ import os
 
 def clean_financials():
     base_path = os.path.dirname(__file__)
-    excel_path = os.path.join(base_path, "..", "Data_Source", "CDPR Data", "key-financial-data-fy-2025.xlsx")
+    excel_path = os.path.join(base_path, "CDPR Data", "key-financial-data-fy-2025.xlsx")
     xl = pd.ExcelFile(excel_path)
     
     # Extracting ALL yearly sheets from 2010 to 2025
@@ -66,7 +66,7 @@ def clean_financials():
         print(f"Processed {year}")
 
     final_df = pd.DataFrame(data_list)
-    output_path = os.path.join(base_path, "..", "Data_Source", "cdpr_cleaned.csv")
+    output_path = os.path.join(base_path, "cdpr_cleaned.csv")
     final_df.to_csv(output_path, index=False)
     print(f"Success! Data from 2010-2025 saved to {output_path}")
 
