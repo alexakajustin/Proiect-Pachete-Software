@@ -1,0 +1,5 @@
+Constanta  23 4 3 5 0 0 2 1 4
+Timisoara  21 5 2 4 3 0 2 0 5
+Bucuresti  31 2 3 0 0 0 3 4 2
+Craiova    20 4 3 5 4 5 2 0 4
+Iasi       27 3 4 0 1 4 2 5 4

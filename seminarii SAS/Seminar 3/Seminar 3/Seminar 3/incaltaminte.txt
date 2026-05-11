@@ -1,0 +1,6 @@
+MaxFlight alergare 1930
+ZipFitLeather drumetie 2250
+ZoomAirborne alergare 4150
+LightStep drumetie 1130
+MaxStepWoven drumetie 2230
+ZipSneak alpinism 1190

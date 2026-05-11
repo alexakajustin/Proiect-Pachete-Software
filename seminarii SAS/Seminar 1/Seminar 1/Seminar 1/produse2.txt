@@ -1,0 +1,5 @@
+hartie,2,birotica
+creione,10,birotica
+apa,6,alimente
+ceai,8,alimente
+tricou,100,haine 

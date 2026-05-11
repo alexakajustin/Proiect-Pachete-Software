@@ -1,0 +1,7 @@
+Ionescu 5.6 M
+Popescu 4.3 F
+Vasilescu 3.3 b
+Georgescu 9.2 F
+Iliescu 10 M
+Samoila 5.9 M
+Toma 7 F

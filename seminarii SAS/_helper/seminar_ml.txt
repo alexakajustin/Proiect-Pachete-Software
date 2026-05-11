@@ -1,0 +1,462 @@
+Seminar SAS  - Detectia clientilor fraudulosi in cadrul sistemelor bancare (Anti Money Laundering – AML)
+Introducere
+
+Un pilon cheie al oricărui program de conformitate AML este monitorizarea tranzacțiilor pentru activitate suspectă. Domeniul tranzacțiilor este larg, incluzând depozite, retrageri, transferuri de fonduri, achiziții, credite și plăți. De obicei, monitorizarea începe cu un sistem bazat pe reguli care scanează tranzacțiile clienților pentru semnale de alarmă consistente cu spălarea banilor. Când o tranzacție se potrivește cu o regulă prestabilită, se generează o alertă și cazul este trimis echipei interne de investigație a băncii pentru o revizuire manuală. Dacă investigatorii concluzionează că acel comportament indică spălarea banilor, atunci banca va depune un Raport de Activitate Suspectă (SAR) la ONPCSB (Oficiul Național de Prevenire și Combatere a Spălării Banilor). 
+De cele mai multe ori, însă, sistemul clasic de monitorizare a tranzacțiilor are multiple puncte slabe. Rata cazurilor fals pozitive (tranzacții normale, dar clasificate ca fiind suspecte) generată de acest sistem poate depăși cote nefavorabile băncii. Așadar, se dorește implementarea unui sistem statistic, care să înlocuiască sistemul standard bazat pe reguli expert (de obicei condiții de tip IF-ELSE) și care să reducă nivelul cazurilor fals pozitive. Vom implementa, folosind un set de date caracteristic unei bănci, un sistem Machine Learning care să surprindă cu o acuratețe cât mai bună clienții cu grad de risc ridicat, cu un număr de cazuri fals pozitive cât mai mic.
+Avem la dispoziție un set de date cuprinzător, compus din 31 de variabile (features). Fiecare variabilă are ca scop surprinderea comportamentului tranzacțional al unui client al băncii. Setul de date complet și descrierea fiecărei variabile o putem regăsi la referința din nota de subsol. 
+	În continuare sunt prezentate câteva dintre aceste variabile: 
+ALERT: Indicator binar (0 sau 1). Poate reprezenta prezența sau absența unui anumit tip de alertă.
+SAR: Variabilă țintă pentru clasificare, binară (0 sau 1). SAR se referă la "Suspicious Activity Report", aceasta indică dacă o activitate suspectă a fost raportată sau nu.
+kycRiskScore: Scor de risc KYC (Know Your Customer). Este un scor numeric care evaluează riscul asociat cu un client, bazat pe diverse criterii.
+income: Venitul clientului. Este o valoare numerică care reprezintă venitul anual al clientului.
+tenureMonths: Vechimea în luni. Numărul de luni de când clientul este asociat cu entitatea (banca, compania etc.)
+creditScore: Scorul de credit. Un număr care reflectă istoricul de credit al clientului. Scoruri mai mari indică un istoric de credit mai bun.
+state: Statul. O variabilă categorială care indică statul în care se află clientul.
+nbrPurchases90d: Numărul de cumpărături în ultimele 90 de zile. O valoare numerică care arată câte tranzacții de cumpărare a efectuat clientul în ultimele 90 de zile.
+avgTxnSize90d: Dimensiunea medie a tranzacției în ultimele 90 de zile. Media valorilor tranzacțiilor efectuate de client în ultimele 90 de zile.
+totalSpend90d: Cheltuielile totale în ultimele 90 de zile. Suma totală cheltuită de client în ultimele 90 de zile.
+nbrOnlinePurchases90d: Numărul de cumpărături online în ultimele 90 de zile. Arată câte cumpărături online a făcut clientul în acest interval de timp.
+nbrInStorePurchases90d: Numărul de cumpărături în magazin în ultimele 90 de zile. Indică numărul de tranzacții efectuate în magazin de către client.
+
+Scopul propus în cadrul seminarului este să realizăm un model de clasificare binară (0 – client cu SAR, 1 – client fără SAR) utilizând cele 30 de variabile independente (se mai numesc și regresori/predictori). 
+Probleme de clasificare în Machine Learning. Învățarea supervizată
+
+De cele mai multe ori, problemele din sfera Machine Learning se împart în două mari categorii: învățarea supervizată (Supervised Learning) și nesupervizată (Unsupervised Learning). În cele ce urmează ne vom concentra pe descrierea metodologiei de lucru necesare primului tip de probleme.
+           Învățarea supervizată (Supervised Learning) 
+Scop: un model matematic este antrenat pe un set de date care include instanțe/observații etichetate de către un specialist. Scopul principal este ca algoritmul să găsească șabloane (tendințe) corecte în setul de date de antrenament pentru a reuși să clasifice instanțe care nu apar în acesta cu eticheta corespunzătoare. Altfel spus, algoritmul să reușească o generalizare a variabilei țintă (de multe ori, în industrie, denumită flag). 
+Modelele de Machine Learning (ML) sunt diverse, fiecare având un specific diferit și o strategie internă de implementare diferită. Printre principalele tipuri de modele putem enumera: regresia logistică, tehnici bazate pe vectori suport (Support Vector Machine – SVM), tehnici bazate pe arbori de decizie (Decision Trees) și tehnici de tip ansamblu (Ensemble Learning – Random Forest,  Light Gradient Boosting Machine Classifier – LGBMClassifier, etc.), acestea fiind doar câteva exemple de modele utilizate în practică. 
+Problemele din sfera învățării supervizate se împart în 2 categorii:
+De regresie: predicția unui rezultat de tip numeric (prezicerea prețului caselor în anii următori, evoluția prețului în criptomonede, alte exemple din econometrie)
+De clasificare: predicția unui rezultat discret, adică etichetarea unor instanțe în categorii. Când în setul de date variabila target prezintă 2 categorii, problema se numește de clasificare binară (Binary Classification). Când există mai multe variante, lucrăm cu probleme de clasificare multiclasă (Multiclass Classification). 
+În cadrul învățării supervizate, setul de date inițial este împărțit/divizat (split) în 2 seturi de date individuale: setul de antrenament și setul de testare. În mod obligatoriu, observațiile din setul de antrenament (training set) sunt distincte de cele din setul de testare (test set). În practică, setul de date inițial este divizat în 3: setul de antrenament, de validare (validation set) și de test, fiecare conținând instanțe unice. Setul de validare este un instrument adjuvant în măsurarea indicatorilor de performanță pentru modelele de clasificare, în timp ce setul de testare este păstrat pentru a aplica modelul antrenat pe instanțe care nu au fost incluse nici în timpul antrenării, dar nici în timpul testării. 
+Împărțirea setului de date în antrenament și test (train-test split) se realizează, de obicei, după o schemă standard, depinzând și de volumul de date disponibil data scientist-ului. De obicei, schema train-test split (volum%train-volum%test ) se realizează după procentele 70%-30% sau 80%-20%, existând variații de la aceste procente (se stabilesc empiric).
+După antrenarea modelelor pe setul de antrenament are loc etapa de testare. În cazul problemelor de clasificare sunt folosiți mai mulți indicatori statistici care descriu capacitățile de generalizare a unui model. Un instrument foarte util în descrierea puterii de clasificare a modelelor este reprezentat de matricea de confuzie (Confusion Matrix). Forma generală a unei matrice de confuzie pentru problemele de clasificare binară este:
+
+Actual: reprezintă eticheta prestabilită de specialist pentru instanțe. Altfel spus, este de fapt eticheta reală a instanțelor din setul de test.
+Predicted: ceea ce returnează modelul ML, adică eticheta/flag-ul pe care modelul de ML o/îl consideră.
+TN: True Negative – adevărat negativ, numărul de instanțe care descrie faptul că modelul ML prezice corect instanțele etichetate cu 0 (non-SAR)
+FP: False Pozitive – fals pozitiv, numărul de instanțe care sunt clasificate de modelul ML cu etichetă 1, în realitate ele fiind negative (0).
+FN: False Negative – fals negativ, instanțele clasificate de model cu 0, deși, în realitate, ele sunt pozitive (1).
+TP: True Positive – adevărat pozitiv, observațiile care sunt corect clasificate de modelul ML cu 1.
+Pe baza tuturor acestor indicatori, putem descrie următoarele metrici de succes pentru un model ML:
+Acuratețea (Accuracy): este măsura generală a performanței unui model și reprezintă proporția de predicții corecte (atât pozitive cât și negative) față de totalul cazurilor. Se calculează folosind formula:
+
+Precizia (Precision): măsura acurateței predicțiilor pozitive. Reflectă proporția de cazuri etichetate ca pozitive de model care sunt de fapt pozitive. Formula este:
+
+Senzitivitate (Recall): măsura capacității modelului de a identifica corect toate cazurile relevante (pozitive). Este important în scenarii unde ratarea cazurilor pozitive este critică (cum este și în cazul problemei noastre). Se calculează astfel:
+
+Scorul F1 (F1-Score): este media armonică între precizie și senzitivitate. Oferă un echilibru între precision și recall și este util când avem o distribuție neregulată a claselor. Formula scorului F1 este:
+
+Modelele de ML nu oferă, de fapt, o clasă anume pentru instanțele pe care le clasifică, ci oferă o probabilitate de apartenență la una dintre clase. Aplicând un prag (threshold), obținem clasa corespunzătoare observației clasificate. De exemplu, dacă avem o probabilitate de 0.4 (40% șanse de apartenență la una dintre clase) cu un threshold prestabilit de 0.5 (50%) pentru o observație din setul de test, atunci acesteia i se va oferi categoria 0 (0.4 < 0.5). Dacă probabilitatea depășește acest prag, atunci observația va fi încadrată în categoria 1.
+Threshold-ul de probabilitate este, de cele mai multe ori, stabilit de către Data Scientist în urma deciziilor de business și a performanțelor modelului. Se pot încerca mai multe variante pentru prag și se va realiza monitorizarea rezultatelor obținute.
+În funcție de decizia de business, se dorește maximizarea unui anumit indicator din cei prezentați anterior. De exemplu, în cazul problemei noastre, se dorește obținerea unui Recall cât mai mare, dar și ca precizia să fie cât mai mare. Matematic, observând formula preciziei, FP trebuie să fie cât mai mic, iar în cazul Recall-ului, FN trebuie să fie minimizat.
+În practică, acest obiectiv este, adeseori, greu de atins. Între Precision și Recall există un compromis, denumit Precision-Recall Tradeoff, care exprimă faptul că, atunci când ne dorim atingerea unui nivel cât mai mare pentru un indicator, există posibilitatea ca celălalt să aibă o valoare nedorită. Astfel, ne dorim atingerea unui threhsold care să fie convenabil atât pentru optimizarea valorii Recall, dar și pentru a obține o precizie adecvată. 
+Un instrument util pentru a stabili pragul de decizie este reprezentat de curba ROC (Receiver Operating Characteristic).
+
+Pe curba ROC putem observa procentele True Positive (TPR) și False Positive (FPR). De obicei, threshold-ul se alege astfel încât ambii indicatori să aibă valori optime (TPR cât mai mare și FPR cât mai mic).
+Aria de sub curba ROC (AUC – Area Under the ROC Curve) este, de asemenea, un indicator de succes pentru modelele de clasificare. Cu cât valoarea acesteia este mai mare, cu atât performanța modelului este mai bună. Un clasificator perfect are AUC = 1 (100%), în timp ce clasificatorii slabi au valori AUC, de obicei, sub 0.6.
+
+Utilizarea limbajului SAS pentru crearea modelului ML de clasificare binară
+În această secțiune, folosind informațiile teoretice prezentate anterior, vom crea un model ML care să aibă o putere de clasificare convenabilă. Având în vedere decizia de business, ne vom concentra pe a obține un Recall cât mai mare la o rată de Precizie cât mai crescută. 
+Încărcarea setului de date în mediul SAS
+Pentru a încărca datele din fișierul aml_demo.csv într-un set de date SAS folosim procedura IMPORT. Aceasta este o procedură des folosită în practică, ce ne permite să importăm date din diferite formate de fișiere externe în seturi de date SAS. În acest fel se simplifică semnificativ procesul de import al datelor în SAS. Argumente relevante pentru PROC IMPORT sunt: 
+DATAFILE: Specifică locația fișierului care va fi importat.
+OUT: Specifică numele care va fi atribuit setului de date de ieșire.
+DBMS: Definește formatul fișierului importat. Unele dintre valorile comune sunt CSV, EXCEL, TAB, DLM, ACCESS.
+REPLACE: Stabilește dacă înlocuim setul de date SAS existent. Dacă se omite REPLACE procedura nu va suprascrie setul de date existent.
+
+Ex. 1: 
+proc import datafile='/home/u61140151/Seminar ML/aml_demo.csv'
+   out=work.aml
+   dbms=csv
+   replace;
+run;
+Etapa de curățare a datelor – tratarea valorilor lipsă 
+În funcție de tipul variabilei ce conține valori lipsă, avem următoarele strategii de tratare a acestora:
+Pentru variabilele numerice înlocuim, de obicei, cu media/mediana variabilei în cauză. Atenție, media este un indicator statistic sensibil la valori extreme!
+Pentru variabilele categoriale/nominale folosim preponderent valoarea modală (cea mai întâlnită valoare din seria variabilei respective)
+Pentru a verifica dacă în setul de date încărcat există valori lipsă, folosim atât procedura FREQ (pentru a verifica lipsa valorilor în rândul variabilelor categoriale), cât și procedura MEANS (pentru variabilele numerice).
+Vom utiliza capacitățile procedurii SQL prin intermediul limbajului SAS astfel încât să încărcăm variabilele numerice și categoriale în liste separate, fără să fie necesară introducerea manuală a acestora în procedurile FREQ și MEANS. Se folosește clauza INTO a procedurii SQL pentru a crea cele două liste de variabile. 
+Ex. 2: 
+proc sql noprint;
+   select name into :var_categ separated by ' ' from dictionary.columns
+   where libname='WORK' and memname='AML' and type='char';
+   select name into :var_num separated by ' ' from dictionary.columns
+   where libname='WORK' and memname='AML' and type='num';
+quit;
+
+Observăm că în codul anterior a fost folosită tabela dictionary. Sistemul SAS generează în timpul rulării, și menține pe parcursul unei sesiuni SAS, informații importante despre bibliotecile, seturile de date, cataloagele, indexurile, macrocomenzile, opțiunile de sistem, titluri etc. într-o colecție de tabele disponibile doar pentru citire, numite tabele dicționar. Cu toate că sunt numite tabele, tabelele dicționar nu sunt tabele reale. Informațiile sunt generate automat în timpul rulării și conținutul este disponibil odată ce o sesiune SAS este începută. Tabelele dicționar și conținutul acestora permit accesarea și monitorizarea cu ușurință a activităților unei sesiuni SAS, prin intermediul interogărilor. În acest exemplu, declarațiile where sunt folosite pentru a selecta variabilele de tip caracter (type='char') și, respectiv, numeric (type='num') din setul de date specificat prin memname și care este stocat în biblioteca descrisă prin libmane.
+
+Pentru vizualizarea rezultatelor utilizăm comenzile:
+
+Ex. 3: 
+proc freq data=work.aml;
+   tables &var_categ / missing;
+run;
+
+și
+
+Ex. 4: 
+proc means data=work.aml n nmiss;
+   var &var_num;
+run;
+
+În lista var_categ regăsim toate variabilele categoriale din setul de date, iar în lista var_num variabilele numerice existente. După rulare, remarcăm faptul că nu există valori lipsă în rândul variabilelor categoriale.
+Variabilele numerice income (venitul clientului) și totalPaymentAmt90d (plățile totale efectuate în ultimele 90 de zile) au mai multe valori lipsă. Pentru coloana income vom înlocui valorile lipsă cu mediana, iar pentru variabila totalPaymentAmt90d vom utiliza media.
+
+Înlocuirea valorilor lipsă din coloana totalPaymentAmt90d cu media se face folosind procedura stdize. Rolul acestei proceduri este să standardizeze una sau mai multe variabile numerice dintr-un set de date SAS.  Pentru standardizare se pot folosi o serie de metode bine-cunoscute precum media, mediana, abaterea standard sau intervalul. Folosim opțiunea reponly pentru a nu standardiza datele existente, ci doar pentru a înlocui valorile lipsă cu valoarea indicatorului specificat prin parametrul method. 
+
+Ex. 5: 
+proc stdize data=work.aml out=work.aml
+            method=mean reponly;
+    var totalPaymentAmt90d;
+run;
+
+
+Înlocuirea valorilor lipsă din coloana income cu mediana folosind aceeași procedură:
+Ex. 6: 
+proc stdize data=work.aml out=work.aml
+            method=median reponly;
+    var income;
+run;
+
+Rulăm încă o dată comanda de vizualizare a proprietăților coloanelor numerice și observăm faptul că toate valorile lipsă au fost tratate corespunzător.
+
+Ex. 7: 
+proc means data=work.aml n nmiss;
+   var &var_num;
+run;
+
+Transformarea variabilelor non-numerice în variabile numerice. Binary Encoding și Label Encoding
+
+În general, algoritmii de Machine Learning sunt capabili să lucreze doar pe date de tip numeric. Există, însă, multe situații în care variabilele din seturile de date de intrare sunt de tip non-numeric (categorial, nominal). În această secțiune vom transforma corespunzător aceste variabile pentru a le putea transmite ca input algoritmilor de Machine Learning ce urmează a fi antrenați.
+Vom elimina din setul de date variabila csrNotes, deoarece are o cardinalitate foarte mare, ceea ce presupune o foarte mare diversitate în valorile acestei variabile, nefiind concludentă pentru setul de date tratat.
+Ex. 8: 
+data work.aml;
+   set work.aml;
+   drop csrNotes; 
+run;
+
+Cardinalitatea variabilei „state” este redusă, având un total de 9 valori unice. Putem studia distribuția acestei variabile folosind comanda: 
+
+Ex. 9: 
+proc freq data=work.aml;
+   tables state / nocum;
+run;
+
+Pentru această variabilă vom utiliza metoda transformării prin frecvență (Frequency Encoding), care presupune înlocuirea etichetelor inițiale prin frecvența (procentul) de apariție a acestora în setul de date. Utilizând comanda de mai sus fără opțiunea nocum putem remarca frecvențele fiecărei valori.
+Salvăm frecvențele separate de valorile inițiale ale variabilei:
+
+Ex. 10: 
+proc freq data=work.aml noprint;
+   tables state / out=work.state_freq (drop=count);
+run;
+
+Pentru a aduce frecvența fiecărui stat în setul original este nevoie să sortăm setul de date original după variabila ‘state’:
+
+Ex. 11:
+ proc sort data=work.aml;
+   by state;
+run;
+
+Aducem în setul de date original variabila transformată (state_freq):
+
+Ex. 12: 
+data work.aml;
+   merge work.aml(in=a) work.state_freq(in=b rename=(percent=state_freq));
+   by state;
+ if a;
+   if b then state = state_freq;
+run;
+
+Ștergem variabila state calculată mai sus, deoarece am avut nevoie de aceasta doar pentru a realiza îmbinarea dintre cele două seturi de date.
+În limbajul SAS, variabilele dintr-un set de date încărcat au tipurile de date fixe. Astfel, tipul de dată pe care variabila state îl va avea va fi cel inițial, string, deși am înlocuit valorile acestei variabile cu frecvența fiecărui stat, tipul neschimbându-se în numeric (float). Astfel, vom șterge variabila state din setul de date și vom păstra variabila state_freq.
+
+Ex. 13:
+data work.aml;
+   set work.aml;
+   drop state; 
+run;
+
+Vom proceda în mod asemănător și pentru variabilele binare din setul de date. Acestea conțin valori de tip DA/NU. În cazul nostru, acestea sunt codificate sub forma Y/N. Codificarea acestora o vom face transformând valoarea Y în 1 și valoare N în 0. 
+Reamintim că în limbajul SAS,  dacă expresia ce include un operator de comparație este adevărată, atunci rezultatul evaluării este 1. Altfel, rezultatul este 0.
+
+Ex. 14:
+data work.aml;
+   set work.aml;
+   
+   ALERT_numeric = (ALERT = 'Y');
+   indOwnsHome_numeric = (indOwnsHome = 'Y');
+   SAR_numeric = (SAR = 'Y');
+
+   drop ALERT indOwnsHome SAR;
+   rename ALERT_numeric=ALERT indOwnsHome_numeric=indOwnsHome SAR_numeric=SAR;
+run;
+
+Calculul matricei de corelație în SAS
+
+Matricea de corelație este un instrument util pentru a măsura în ce măsură variabilele din setul de date sunt corelate între ele. Coeficientul de corelație calculat pentru setul nostru de date este coeficientul Pearson, adesea utilizat pentru a măsura corelațiile liniare dintre variabile. Valorile coeficientului de corelație sunt situate în intervalul [-1, 1], apropierea de 1 însemnând o corelație puternică (graduală, depinzând de valorile coeficientului) și directă (schimbările din variabile sunt în același sens), iar apropierea de -1 reprezentând o corelație indirectă (variațiile în variabile se manifestă în sensuri contrare). 
+În SAS ne propunem să calculăm corelația dintre variabilele income, tenureMonths, creditScore, kycRiskScore, nbrPurchases90d, avgTxnSize90d, totalSpend90d maxRevolveLine și variabila țintă, SAR. Utilizăm procedura corr:
+Ex. 15: 
+proc corr data=work.aml;
+   var income tenureMonths creditScore kycRiskScore nbrPurchases90d avgTxnSize90d totalSpend90d maxRevolveLine;
+   with SAR;
+run;
+
+Vizualizarea distribuției variabilei SAR și train-test split
+
+În problemele de Machine Learning, distribuția variabilei dependente joacă un rol foarte important în ceea ce privește construirea modelelor. Există două tipologii de probleme, în funcție de această distribuție:
+probleme balansate, în care numărul de instanțe din categoriile de clasificat sunt relativ apropiate;
+probleme imbalansate, când există un dezechilibru puternic în categoriile de clasificat.
+Vom analiza grafic distribuția variabilei SAR pentru a studia imbalansarea celor două clase.
+Ex. 16:
+proc sgplot data=work.aml;
+   vbar SAR / datalabel;
+   title "Distribution of SAR Variable";
+run;
+
+Putem remarca din bar chart faptul că există o majoritate a instanțelor care aparțin clasei   0, un număr redus de alerte fiind raportate (8974 vs 1026). În general, problemele de clasificare se confruntă cu acest fenomen de imbalansare. Există două tehnici (nu le vom aplica în acest seminar) de a rezolva acest fenomen, și anume oversampling (adăugarea de instanțe sintetice în setul de date, create prin metode statistice specifice pentru a echilibra cele două clase) și undersampling, procedeul complementar primei abordări.
+În cazul în care problema este imbalansată, există riscul ca estimatorul creat prin modelare să fie deplasat (Biased Estimator), deoarece, la momentul antrenării, modelul are o expunere mai mare la instanțele din clasa majoritară, îngreunând procesul de învățare pentru comportamentele suspecte. În general, în problemele din realitate, fenomenul de imbalansare este foarte frecvent.
+Următorul pas este cel de împărțire a setului de date inițial în set de antrenament (train set) și set de test (test set). Setul de antrenament va conține 70% din totalul observațiilor, iar setul de testare 30% din total. Acest proces se numește, în statistică, eșantionare. 
+În SAS, pentru a eșantiona setul de date inițial, vom utiliza procedura surveyselect, având ca metodă eșantionarea simplă aleatoare (Simple Random Sample – SRS). Menționarea parametrului seed asigură reproductibilitatea rezultatelor (vom obține aceleași rezultate ori de câte ori vom rula codul nostru). Rate reprezintă proporția definită anterior (70%). 
+Prin opțiunea OUTALL includem toate observațiile din setul de date de intrare specificat în DATA în setul de date de ieșire din declarația OUT. În mod implicit, setul de date de ieșire include numai acele observații selectate pentru eșantion. Dacă specificăm opțiunea OUTALL, setul de date de ieșire va include toate observațiile din setul de date de intrare și, de asemenea, va conține o variabilă care indică starea de selecție a fiecărei observații într-o variabilă numită SELECTED. Variabila SELECTED este egală cu 1 pentru o observație care este selectată pentru eșantion și cu 0 pentru o observație care nu este selectată. 
+
+Ex. 17:
+/* Definim proportia de impartire in antrenament-test */
+%let train_prop = 0.7;
+/* Impartim setul de date */
+proc surveyselect data=work.aml out=work.train outall
+   method=srs /* Simple Random Sample */
+   rate=&train_prop
+   seed=12345;
+run;
+data work.train work.test;
+   set work.train;
+   if selected then output work.train;
+   else output work.test;
+run;
+
+Ca pas intermediar vom crea o variabilă macro care va reprezenta o listă cu toate variabilele independente prezente în setul de date. Acest pas este necesar pentru a evita să precizăm manual fiecare variabilă independentă în modelele de clasificare.
+Ex. 18:
+proc sql noprint;
+   select name into :indepVars separated by ' '
+   from dictionary.columns
+   where libname='WORK' and memname='AML' and name ne 'SAR';
+quit;
+
+Antrenarea modelelor de Machine Learning, testarea și analiza rezultatelor
+
+Modelul de regresie logistică (Logistic Regression – LR)
+
+Reprezintă unul dintre modele de bază din categoria estimatorilor de clasificare, rezultatul generat de acesta fiind o probabilitate ca o instanță să aparțină la una dintre clasele specificate în problemă, adică un rezultat în intervalul (0,1). Vom afișa, de asemenea, și curba ROC pentru acest model folosind opțiunea plots = roc.
+În SAS, acesta se creează prin procedura logistic, precum în exemplul următor, urmând ca, după ce am antrenat modelul, să trasăm graficul ROC și să afișăm valoarea AUC. Prin utilizarea procedurii score, salvăm predicțiile efectuate pe setul de test (work.test) în setul de date test_pred. Opțiunea outroc=vroc permite afișarea curbei ROC, iar valorile necesare trasării graficului vor fi salvate în setul numit vroc.
+
+Ex. 19:
+proc logistic data=work.train descending outmodel=work.logitmodel;
+   model SAR(event='1') = &indepVars;
+   score data=work.test out = test_pred out+roc=vroc;
+run;
+
+
+Putem observa, din curba ROC, faptul că modelul are o capacitate de clasificare foarte bună, obținând un scor AUC (Area Under Curve) aprox. egal cu 0.9. În cazul problemelor de clasificare în care există o clasă în minoritate, cum este în cazul nostru, curba ROC, de obicei, poate fi o măsură necorespunzătoare pentru date. Se recomandă trasarea curbei Precision-Recall (Precision-Recall curve), care este utilizată, de obicei, pe seturile de date imbalansate. 
+
+În setul de date work.test_pred creăm coloanele pred_class și pred_class_2 pentru a  studia rezultatele în funcție de valoarea prag a probabilității setată de noi. Pred_class va conține predicțiile pentru un prag de 0.5, iar pred_class_2 va conține clasificările pentru un prag de probabilitate egal cu 0.115. Procedura LOGISTIC generează 2 probabilități: probabilitatea de apartenență la clasa 0 (P_0), respective probabilitatea de apartenență la clasa 1 (P_1). Vom aplica pragul de probabilitate pentru P_1 întrucât este evenimentul de interes.
+
+Ex. 20:
+/* Cream predictii pe baza unor praguri (stabilite in mod empiric)*/
+data work.test_pred;
+   set work.test_pred;
+   pred_class = (P_1 > 0.5);
+   pred_class_2 = (P_1 > 0.115);
+run;
+
+    Afișarea matricei de confuzie pentru modelul creat, prag de probabilitate egal cu 0.5 (50%) 
+	
+Ex. 21:
+title1 'Matrice de confuzie pentru modelul de regresie logistica';
+proc freq data=work.test_pred;
+	tables SAR * pred_class / nocol;
+run;
+
+      Din matricea de confuzie putem remarca  faptul că se obține o clasificare optimă pentru observațiile din categoria 0 (2676), valori adevărat negative (True Negative – TN), însă, pentru pragul de probabilitate de 0.5, remarcăm și un număr crescut de alerte fals negative (False Negative – FN), ceea ce ne indică faptul că, pentru acest prag, modelul tinde să scadă valoarea senzitivității (Recall), ceea ce nu este de dorit în cazul problemei studiate. Rata senzitivității este foarte importantă în cadrul problemei studiate, având în vedere faptul că trebuie să avem un număr cât mai mic de cazuri FN.
+     Utilizând formulele de calcul pentru Recall și Precision, obținem:
+
+și
+
+
+
+    Pentru a găsi un nivel acceptabil pentru rata senzitivității, avem nevoie de reglarea pragului de probabilitate setat. De aceea, vom utiliza un al doilea prag de probabilitate, mai mic decât 0.5. Observăm că, pentru praguri mai mari, modelul tinde să încadreze observațiile cu preponderență în clasa fals negativ.
+
+     Afișarea matricei de confuzie pentru model, prag de probabilitate 0.115 (11.5%)  folosind procedura FREQ:
+
+
+
+Ex. 22:
+title2 'Matrice de confuzie pentru modelul de regresie logistica prag 2';
+proc freq data=work.test_pred;
+	tables SAR * pred_class_2 / nocol;
+run; 
+
+     În acest caz, observăm faptul că doar 20 de instanțe din categoria 1 au fost incorect încadrate ca fiind negative de către model, dar și numărul cazurilor fals pozitive au crescut. Însă, având în vedere dimensionalitatea datelor din categoria 0, vom reuși să surprindem cu o rată de senzitivitate cât mai bună cazurile de clienți raportați. 
+
+
+
+
+
+     Putem remarca faptul că, pentru pragul de probabilitate ales, modelul surprinde cu un procent de 92.5% cazurile riscante, dar cu un nivel de precizie mai scăzut decât pragul inițial, 34%. Acest lucru se datorează și numărului redus de cazuri raportate din setul de date. 
+
+Modelul arbore de decizie (Decision Tree Classifier)
+
+     Arborii de decizie reprezintă modele de Machine Learning non-parametrice, adică nu se fac presupuneri despre distribuțiile variabilelor de intrare în model. Structura modelului este de tip arbore, în care nodurile interne reprezintă variabilele, ramurile reprezintă regulile, iar nodurile frunză denotă rezultatele algoritmului. Este unul dintre cei mai utilizați algoritmi de Machine Learning.
+     În limbajul SAS putem crea arbori de decizie prin procedura hpsplit, specificând mai mulți parametri specifici acestui algoritm. 
+     Grow entropy reprezintă măsura de puritate a unui nod din cadrul arborelui de decizie. Puritatea unui nod reprezintă măsura în care nodul conține date dintr-o singură clasă. Altfel spus, măsoară omogenitatea datelor dintr-un nod al arborelui. Cu cât un nod este mai pur, cu atât probabilitatea ca o instanță nouă, care ajunge în acel nod, să aparțină clasei majoritare din nod este mai mare. 
+     Prune costcomplexity este un parametru care controlează fenomenul de supra-adaptare/overfitting (atunci când un model învață foarte bine setul de antrenament, dar greșește mult pe setul de testare). 
+     Codul specific arborelui de decizie creat îl vom salva în fișierul tree.sas, pe calea locală, pe care îl vom aplica pe setul de testare și vom crea matricele de confuzie specifice.
+
+Ex. 23:
+proc hpsplit data=work.train seed=123;
+    class SAR;
+	model SAR(event='1') = &indepVars;
+	grow entropy;
+	prune costcomplexity;
+	code file = '/home/u61140151/Seminar ML/tree.sas';
+run;
+
+  data predictii_arbore;
+	set work.test;
+	%include '/home/u61140151/Seminar ML/tree.sas';
+	pred_tree_05 = (P_SAR1 > 0.5);
+	pred_tree_0115 = (p_SAR1 > 0.115);
+run;
+
+
+
+     Pentru modelul arbore de decizie, scorul AUC este egal cu 0.96, ceea ce indică faptul că avem o putere de clasificare bună a instanțelor. 
+
+Ex. 24:
+title3 'Matrice de confuzie pentru modelul arbore de decizie, threshold 0.5';
+proc freq data=work.predictii_arbore;
+	tables SAR * pred_tree_05 / nocol;
+run;
+
+La o valoare prag egală cu 0.5, avem următoarele rezultate:
+
+
+
+
+
+
+Ex. 25:
+title4 'Matrice de confuzie pentru modelul arbore de decizie, threshold 0.115';
+proc freq data=work.predictii_arbore;
+	tables SAR * pred_tree_0115 / nocol;
+run;
+
+La o valoare prag egală cu 0.115, avem următoarele rezultate:
+
+
+
+
+
+
+Utilizarea Multiple Imputation pentru tratarea valorilor lipsă din setul de date. Compararea rezultatelor.
+
+     Imputarea multiplă este o tehnică statistică utilizată pentru gestionarea datelor lipsă. În multe studii, este comun să se întâlnească seturi de date cu valori lipsă, fie din cauza neînregistrării răspunsurilor, pierderii datelor sau a altor probleme de colectare a datelor. Aceste valori lipsă pot introduce erori și pot distorsiona analiza și interpretarea rezultatelor. Imputarea multiplă abordează această problemă prin înlocuirea valorilor lipsă cu un set de valori plauzibile, generând mai multe seturi complete de date. Pentru problema noastră, vom utiliza un singur set de date imputat, pe care îl vom pregăti pentru modelele de regresie logistică și arbore de decizie.
+	Pentru această etapă, vom rula din nou setul de date și vom efectua preprocesările  necesare (Ex. 1-14). Vom omite înlocuirea prin medie și mediană.
+1. Regresia Logistică
+Putem folosi opțiunea nimpute pentru a specifica numărul de imputări care urmează să fie efectuate. Seturile de date imputate vor fi generate folosind opțiunea out= și stocate împreună, atașate sau "stivuite", într-un set de date numit "MIdata". O variabilă index numită imputation este creată automat de procedură pentru a număra fiecare nou set de date imputat. După declarația var, sunt specificate toate variabilele pentru modelul de imputare, inclusiv toate variabilele din modelul analitic precum și orice variabile auxiliare. Opțiunea seed nu este obligatorie, dar deoarece MI este conceput să fie un proces aleator, stabilirea unui seed ne permite să obținem același set de date imputat de fiecare dată.
+proc MI data = work.aml seed=1234 out=MIdata nimpute=1; 
+	var totalPaymentAmt90d income; 
+run;
+
+/* Selectam variabilele independente in lista separata */
+proc sql noprint;
+   select name into :indepVars separated by ' '
+   from dictionary.columns
+   where libname='WORK' and memname='AML' and name ne 'SAR';
+quit;
+
+/* Definim proportia de impartire in antrenament-test */
+%let train_prop = 0.7;
+
+/* Impartim setul de date */
+proc surveyselect data=MIdata out=work.train outall
+   method=srs 
+   rate=&train_prop
+   seed=12345;
+run;
+
+data work.train work.test;
+   set work.train;
+   if selected then output work.train;
+   else output work.test;
+run;
+
+/* Construirea modelului de regresie logistica */
+proc logistic data=work.train descending outmodel=work.logitmodel;
+   model SAR(event='1') = &indepVars;
+   score data=work.test out = test_pred outroc=vroc;
+run;
+
+/* Cream predictii pe baza unor praguri */
+data work.test_pred;
+   set work.test_pred;
+   pred_class = (P_1 > 0.5);
+   pred_class_2 = (P_1 > 0.115);
+run;
+
+title5 'Matrice de confuzie pentru modelul de regresie logistica MI';
+proc freq data=work.test_pred;
+	tables SAR * pred_class / nocol;
+run;
+title6 'Matrice de confuzie pentru modelul de regresie logistica prag 2 MI';
+proc freq data=work.test_pred;
+	tables SAR * pred_class_2 / nocol;
+
+Curba ROC arată o ușoară îmbunătățire a rezultatelor (0.907 vs 0.9101), dar, având în vedere faptul că numărul valorilor lipsă nu este semnificativ în variabilele income și totalPaymentAmt90d, nu sunt modificări majore. Înlocuirea valorilor lipsă este un proces care, de multe ori, în practică, are impact asupra rezultatelor finale ale clasificării.
+
+
+
+
+
+2. Arbore de decizie
+Vom parcurge aceiași pași ca în cazul primei antrenări.
+
+/* Construire si antrenare arbore */
+proc hpsplit data=work.train seed=123;
+    class SAR;
+	model SAR(event='1') = &indepVars;
+	grow entropy;
+	prune costcomplexity;
+	code file = '/home/u61140151/Seminar ML/tree.sas';
+run;
+
+/* Construire predictii si analize pe baza pragurilor stabilite empiric */
+data predictii_arbore;
+	set work.test;
+	%include '/home/u61140151/Seminar ML/tree.sas';
+	pred_tree_05 = (P_SAR1 > 0.5);
+	pred_tree_0115 = (p_SAR1 > 0.1);
+run;
+
+title7 'Matrice de confuzie pentru modelul arbore de decizie, threshold 0.5 MI';
+proc freq data=work.predictii_arbore;
+	tables SAR * pred_tree_05 / nocol;
+run;
+
+title8 'Matrice de confuzie pentru modelul arbore de decizie, threshold 0.115 MI';
+proc freq data=work.predictii_arbore;
+	tables SAR * pred_tree_0115 / nocol;
+run;
+
+Scorul ROC-AUC prezintă același nivel ca și în cazul primei antrenări. Însă, rezultatele matricei de confuzie arată că, prin imputarea multiplă, pentru ambele threshold-uri, modelul este mai capabil să distingă cazurile FN de cazurile TP. Rezultatele sunt:
+
+
+
+Concluzii
+
+	Modelele de ML sunt, în acest moment, unele dintre cele mai utile instrumente pentru dezvoltatorii software, dar și pentru publicul larg, în general. Ca și Machine Learning Engineers, cele mai bune practici sunt:
+1. Explorați, înțelegeți și preprocesați datele adecvat: cu cât aveți o viziune mai bună a datelor, cu atât proiectele voastre vor avea mai mult succes;
+2. Experimentați: aplicați mai multe modele pentru a identifica care dintre acestea oferă cele mai bune rezultate; în funcție de datele pe care le aveți, unele modele pot fi potrivite, altele nu;
+3. Interpretați și comunicați: cel mai important aspect este să înțelegeți rezultatele modelelor voastre, dar și să aveți o manieră potrivită pentru a comunica rezultatele voastre. Majoritatea sunt persoane non-tehnice, deci este nevoie să știți cum să vă faceți înțeleși de ceilalți;
+4. Învățați continuu: domeniul este într-o continuă schimbare, deci atât tehnologiile, cât și metodele, se află într-un dinamism rapid. Continuați să studiați și să vă adaptați noilor apariții din domeniu 
